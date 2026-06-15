@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract version from commit message
+        id: meta
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if [[ "$COMMIT_MSG" =~ (v[0-9]+\.[0-9]+\.[0-9]+) ]]; then
+            echo "version=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+          {
+            echo 'notes<<EOF'
+            printf '%s\n' "$COMMIT_MSG"
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create plugin zip
+        if: steps.meta.outputs.found == 'true'
+        run: |
+          zip -r "TextTools-${{ steps.meta.outputs.version }}.zip" . \
+            -x ".git/*" \
+            -x ".git/**/*" \
+            -x ".github/*" \
+            -x ".github/**/*"
+
+      - name: Create GitHub Release
+        if: steps.meta.outputs.found == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.version }}
+          name: Text Tools ${{ steps.meta.outputs.version }}
+          body: ${{ steps.meta.outputs.notes }}
+          files: TextTools-${{ steps.meta.outputs.version }}.zip
+          generate_release_notes: false
