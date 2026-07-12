@@ -2,8 +2,8 @@ name: Release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*.*.*'
 
 permissions:
   contents: write
@@ -25,25 +25,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Extract version from commit message
+      - name: Extract version and notes
         id: meta
         env:
-          COMMIT_MSG: ${{ github.event.head_commit.message }}
+          TAG: ${{ github.ref_name }}
         run: |
-          if [[ "$COMMIT_MSG" =~ (v[0-9]+\.[0-9]+\.[0-9]+) ]]; then
-            echo "version=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
-            echo "found=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "found=false" >> "$GITHUB_OUTPUT"
-          fi
+          echo "version=$TAG" >> "$GITHUB_OUTPUT"
           {
             echo 'notes<<EOF'
-            printf '%s\n' "$COMMIT_MSG"
+            echo "Release $TAG"
             echo 'EOF'
           } >> "$GITHUB_OUTPUT"
 
       - name: Create plugin zip
-        if: steps.meta.outputs.found == 'true'
         run: |
           zip -r "TextTools-${{ steps.meta.outputs.version }}.zip" . \
             -x ".git/*" \
@@ -52,7 +46,6 @@ jobs:
             -x ".github/**/*"
 
       - name: Create GitHub Release
-        if: steps.meta.outputs.found == 'true'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.meta.outputs.version }}
