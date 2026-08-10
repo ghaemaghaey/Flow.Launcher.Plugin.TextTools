@@ -13,11 +13,6 @@ import re
 class TextTools(FlowLauncher):
 
     def query(self, query):
-        try:
-            text = pyperclip.paste()
-        except:
-            text = ""
-
         tools = [
             {"name": "Arabic to Persian", "subtitle": "Replace ك→ک and ي→ی", "method": "arabic_to_persian"},
             {"name": "Add comma to each line", "subtitle": "Append , to end of every line", "method": "add_comma"},
@@ -28,6 +23,10 @@ class TextTools(FlowLauncher):
             {"name": "Remove all spaces", "subtitle": "Remove full spaces, half spaces, and zero-width chars", "method": "remove_spaces"},
         ]
 
+        # No text passed as a parameter anymore — each action method
+        # reads the clipboard itself at execution time, so it always
+        # gets what's on the clipboard right when you click, not
+        # whatever was there when query() ran.
         return [
             {
                 "Title": tool["name"],
@@ -35,32 +34,45 @@ class TextTools(FlowLauncher):
                 "IcoPath": "Images/app.png",
                 "JsonRPCAction": {
                     "method": tool["method"],
-                    "parameters": [text]
+                    "parameters": []
                 }
             }
             for tool in tools
             if query.lower() in tool["name"].lower() or query == ""
         ]
 
-    def arabic_to_persian(self, text):
+    def _get_clipboard_text(self):
+        try:
+            return pyperclip.paste()
+        except Exception:
+            return ""
+
+    def arabic_to_persian(self):
+        text = self._get_clipboard_text()
         pyperclip.copy(text.replace("ك", "ک").replace("ي", "ی"))
 
-    def add_comma(self, text):
+    def add_comma(self):
+        text = self._get_clipboard_text()
         pyperclip.copy("\n".join(line + "," for line in text.splitlines()))
 
-    def to_upper(self, text):
+    def to_upper(self):
+        text = self._get_clipboard_text()
         pyperclip.copy(text.upper())
 
-    def to_lower(self, text):
+    def to_lower(self):
+        text = self._get_clipboard_text()
         pyperclip.copy(text.lower())
 
-    def remove_empty_lines(self, text):
+    def remove_empty_lines(self):
+        text = self._get_clipboard_text()
         pyperclip.copy("\n".join(l for l in text.splitlines() if l.strip()))
 
-    def trim_lines(self, text):
+    def trim_lines(self):
+        text = self._get_clipboard_text()
         pyperclip.copy("\n".join(l.strip() for l in text.splitlines()))
 
-    def remove_spaces(self, text):
+    def remove_spaces(self):
+        text = self._get_clipboard_text()
         # Remove: regular space, half-space (ZWNJ U+200C), zero-width space (U+200B),
         # non-breaking space (U+00A0), em space, en space, thin space, and all unicode spaces
         cleaned = re.sub(r'[\s\u200c\u200b\u00a0\u2000-\u200a\u202f\u205f\u3000\ufeff]', '', text)
