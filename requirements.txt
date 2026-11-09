@@ -1,2 +1,15 @@
 flowlauncher
 pyperclip
+requests
+dnspython
+PyYAML
+qrcode
+Pillow
+cryptography
+tzdata
+markdown
+markdownify
+beautifulsoup4
+svglib
+reportlab<5
+rlPyCairo

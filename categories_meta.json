@@ -1,0 +1,202 @@
+[
+  {
+    "id": "network",
+    "title": "شبکه و تشخیص وب",
+    "titleEn": "Network & Web Diagnostics",
+    "description": "ابزارهای IP، زیرشبکه، DNS و بررسی وب",
+    "icon": "Network",
+    "accent": "#38BDF8"
+  },
+  {
+    "id": "encoding",
+    "title": "کدگذاری و رمزگشایی",
+    "titleEn": "Encoding & Decoding",
+    "description": "Base64، URL، HTML، Hex و تبدیل‌های متنی",
+    "icon": "ArrowLeftRight",
+    "accent": "#2DD4BF"
+  },
+  {
+    "id": "crypto",
+    "title": "هش و رمزنگاری",
+    "titleEn": "Hashing & Crypto",
+    "description": "هش، HMAC، کلید، JWT و امنیت",
+    "icon": "ShieldCheck",
+    "accent": "#34D399"
+  },
+  {
+    "id": "text",
+    "title": "متن و رشته",
+    "titleEn": "Text & String",
+    "description": "شمارش، تبدیل حالت، مرتب‌سازی و پردازش متن",
+    "icon": "Type",
+    "accent": "#F4A93B"
+  },
+  {
+    "id": "regex",
+    "title": "عبارات باقاعده",
+    "titleEn": "Regex",
+    "description": "تست، ساخت و توضیح عبارات باقاعده",
+    "icon": "Regex",
+    "accent": "#A78BFA"
+  },
+  {
+    "id": "data",
+    "title": "داده و فرمت‌ها",
+    "titleEn": "Data Formats",
+    "description": "JSON، YAML، XML، CSV و تبدیل میان آن‌ها",
+    "icon": "Braces",
+    "accent": "#FBBF24"
+  },
+  {
+    "id": "code",
+    "title": "کد و توسعه",
+    "titleEn": "Code & Dev",
+    "description": "قالب‌بندی، فشرده‌سازی و کمک‌های برنامه‌نویسی",
+    "icon": "Code",
+    "accent": "#FB7185"
+  },
+  {
+    "id": "url",
+    "title": "URL و وب",
+    "titleEn": "URL & Web",
+    "description": "تجزیه، ساخت و ابزارهای آدرس و وب",
+    "icon": "Link",
+    "accent": "#22D3EE"
+  },
+  {
+    "id": "datetime",
+    "title": "تاریخ و زمان",
+    "titleEn": "Date & Time",
+    "description": "Timestamp، منطقه زمانی و محاسبات تاریخ",
+    "icon": "Clock",
+    "accent": "#818CF8"
+  },
+  {
+    "id": "units",
+    "title": "واحد و عدد",
+    "titleEn": "Units & Numbers",
+    "description": "تبدیل واحد، مبنای عدد و محاسبات",
+    "icon": "Ruler",
+    "accent": "#A3E635"
+  },
+  {
+    "id": "color",
+    "title": "رنگ و طراحی",
+    "titleEn": "Color & Design",
+    "description": "تبدیل رنگ، پالت، گرادیان و CSS",
+    "icon": "Palette",
+    "accent": "#E879F9"
+  },
+  {
+    "id": "media",
+    "title": "تصویر و رسانه",
+    "titleEn": "Image & Media",
+    "description": "تغییر اندازه، فشرده‌سازی و تبدیل تصویر",
+    "icon": "Image",
+    "accent": "#FB923C"
+  },
+  {
+    "id": "file",
+    "title": "فایل و آرشیو",
+    "titleEn": "File & Archive",
+    "description": "هش فایل، فشرده‌سازی و بازرسی فایل",
+    "icon": "FileArchive",
+    "accent": "#60A5FA"
+  },
+  {
+    "id": "table",
+    "title": "جدول و CSV",
+    "titleEn": "Table & CSV",
+    "description": "نمایش، تبدیل و پردازش داده‌های جدولی",
+    "icon": "Table",
+    "accent": "#4ADE80"
+  },
+  {
+    "id": "diagram",
+    "title": "نمودار و تجسم",
+    "titleEn": "Diagrams",
+    "description": "Mermaid، گراف و رسم نمودار",
+    "icon": "Workflow",
+    "accent": "#C084FC"
+  },
+  {
+    "id": "generators",
+    "title": "مولدها",
+    "titleEn": "Generators",
+    "description": "UUID، رمز، داده‌ی ساختگی و QR",
+    "icon": "Sparkles",
+    "accent": "#FBA94C"
+  },
+  {
+    "id": "validators",
+    "title": "اعتبارسنج‌ها",
+    "titleEn": "Validators",
+    "description": "بررسی صحت ایمیل، JSON، کارت و موارد دیگر",
+    "icon": "BadgeCheck",
+    "accent": "#10B981"
+  },
+  {
+    "id": "browser",
+    "title": "مرورگر و دستگاه",
+    "titleEn": "Browser & Device",
+    "description": "تشخیص مرورگر، دستگاه و قابلیت‌ها",
+    "icon": "MonitorSmartphone",
+    "accent": "#0EA5E9"
+  },
+  {
+    "id": "logs",
+    "title": "لاگ و مانیتورینگ",
+    "titleEn": "Logs & Monitoring",
+    "description": "قالب‌بندی و تحلیل لاگ و خطا",
+    "icon": "ScrollText",
+    "accent": "#94A3B8"
+  },
+  {
+    "id": "api",
+    "title": "API و درخواست",
+    "titleEn": "API & Request",
+    "description": "cURL، هدر، توکن و ابزارهای درخواست",
+    "icon": "Webhook",
+    "accent": "#F472B6"
+  },
+  {
+    "id": "seo",
+    "title": "سئو و محتوا",
+    "titleEn": "SEO & Content",
+    "description": "متا تگ، Open Graph و تحلیل محتوا",
+    "icon": "TrendingUp",
+    "accent": "#22C55E"
+  },
+  {
+    "id": "a11y",
+    "title": "دسترس‌پذیری",
+    "titleEn": "Accessibility",
+    "description": "کنتراست، WCAG و بررسی دسترس‌پذیری",
+    "icon": "Accessibility",
+    "accent": "#3B82F6"
+  },
+  {
+    "id": "geo",
+    "title": "مکان و نقشه",
+    "titleEn": "Location & Geo",
+    "description": "مختصات، فاصله و فرمت‌های جغرافیایی",
+    "icon": "MapPin",
+    "accent": "#F87171"
+  },
+  {
+    "id": "finance",
+    "title": "مالی و کسب‌وکار",
+    "titleEn": "Finance & Business",
+    "description": "درصد، سود، وام و محاسبات مالی",
+    "icon": "Banknote",
+    "accent": "#EAB308"
+  },
+  {
+    "id": "reference",
+    "title": "مرجع و یادگیری",
+    "titleEn": "Reference & Learning",
+    "description": "مرجع‌های HTTP، CSS، Git و چیت‌شیت‌ها",
+    "icon": "BookOpen",
+    "accent": "#5EEAD4"
+  }
+]

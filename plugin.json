@@ -2,11 +2,11 @@
     "ID": "39a68fde-a547-4bfc-8145-9cfa444c3ab5",
     "ActionKeyword": "tt",
     "Name": "Text Tools",
-    "Description": "Text manipulation tools",
+    "Description": "200+ text, data, crypto, network and developer tools",
     "Author": "Ghaem",
-    "Version": "1.0.8",
+    "Version": "2.0.0",
     "Language": "python",
-    "Website": "",
+    "Website": "https://github.com/ghaemaghaey/Flow.Launcher.Plugin.TextTools",
     "IcoPath": "Images\\app.png",
     "ExecuteFileName": "main.py"
 }

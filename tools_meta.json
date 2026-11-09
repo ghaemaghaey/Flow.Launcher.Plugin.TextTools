@@ -1,0 +1,3442 @@
+[
+  {
+    "id": "http-headers",
+    "title": "بازرسی هدرهای HTTP",
+    "titleEn": "HTTP Headers Inspector",
+    "description": "دریافت وضعیت و هدرهای پاسخ یک آدرس (از طریق سرور، با محدودیت)",
+    "category": "network",
+    "keywords": [
+      "http",
+      "headers",
+      "هدر",
+      "curl",
+      "cors",
+      "وضعیت",
+      "response"
+    ],
+    "server": true
+  },
+  {
+    "id": "base64",
+    "title": "کدگذار و رمزگشای Base64",
+    "titleEn": "Base64 Encode / Decode",
+    "description": "تبدیل متن به Base64 و بالعکس، با پشتیبانی از حالت URL-safe",
+    "category": "encoding",
+    "keywords": [
+      "base64",
+      "بیس ۶۴",
+      "encode",
+      "decode",
+      "رمزگذاری",
+      "atob",
+      "btoa"
+    ],
+    "featured": true
+  },
+  {
+    "id": "url-encode",
+    "title": "کدگذار و رمزگشای URL",
+    "titleEn": "URL Encode / Decode",
+    "description": "encodeURIComponent و decodeURIComponent برای آدرس‌ها و پارامترها",
+    "category": "encoding",
+    "keywords": [
+      "url",
+      "percent",
+      "درصد",
+      "encodeuri",
+      "آدرس",
+      "کوئری"
+    ]
+  },
+  {
+    "id": "html-entities",
+    "title": "موجودیت‌های HTML",
+    "titleEn": "HTML Entities Encode / Decode",
+    "description": "تبدیل کاراکترهای ویژه به entity و بالعکس",
+    "category": "encoding",
+    "keywords": [
+      "html",
+      "entity",
+      "موجودیت",
+      "escape",
+      "amp",
+      "lt",
+      "gt"
+    ]
+  },
+  {
+    "id": "jwt-decoder",
+    "title": "رمزگشای JWT",
+    "titleEn": "JWT Decoder",
+    "description": "نمایش header و payload توکن JWT بدون نیاز به سرور",
+    "category": "encoding",
+    "keywords": [
+      "jwt",
+      "token",
+      "توکن",
+      "json web token",
+      "header",
+      "payload"
+    ],
+    "featured": true
+  },
+  {
+    "id": "hex-text",
+    "title": "تبدیل متن و Hex",
+    "titleEn": "Text ↔ Hex",
+    "description": "کدگذاری و رمزگشایی متن به مبنای شانزده‌گانه",
+    "category": "encoding",
+    "keywords": [
+      "hex",
+      "hexadecimal",
+      "شانزده",
+      "bytes",
+      "بایت"
+    ]
+  },
+  {
+    "id": "morse-code",
+    "title": "کد مورس",
+    "titleEn": "Morse Code",
+    "description": "تبدیل متن به کد مورس و بالعکس",
+    "category": "encoding",
+    "keywords": [
+      "morse",
+      "مورس",
+      "code",
+      "dot",
+      "dash"
+    ]
+  },
+  {
+    "id": "caesar-cipher",
+    "title": "رمز سزار و ROT13",
+    "titleEn": "Caesar Cipher / ROT13",
+    "description": "رمز جابه‌جایی حروف با شیفت دلخواه و ROT13",
+    "category": "encoding",
+    "keywords": [
+      "caesar",
+      "rot13",
+      "سزار",
+      "cipher",
+      "رمز",
+      "shift"
+    ]
+  },
+  {
+    "id": "hash-text",
+    "title": "هش متن",
+    "titleEn": "Text Hash (MD5 / SHA)",
+    "description": "محاسبه‌ی MD5، SHA-1، SHA-256، SHA-384 و SHA-512 در مرورگر",
+    "category": "crypto",
+    "keywords": [
+      "hash",
+      "md5",
+      "sha",
+      "sha256",
+      "هش",
+      "checksum",
+      "digest"
+    ],
+    "featured": true
+  },
+  {
+    "id": "hmac",
+    "title": "مولد HMAC",
+    "titleEn": "HMAC Generator",
+    "description": "تولید HMAC با کلید و الگوریتم SHA دلخواه",
+    "category": "crypto",
+    "keywords": [
+      "hmac",
+      "key",
+      "کلید",
+      "sha",
+      "signature",
+      "امضا"
+    ]
+  },
+  {
+    "id": "password-strength",
+    "title": "سنجش قدرت رمز عبور",
+    "titleEn": "Password Strength",
+    "description": "برآورد آنتروپی و قدرت رمز عبور (تخمینی)",
+    "category": "crypto",
+    "keywords": [
+      "password",
+      "رمز",
+      "strength",
+      "entropy",
+      "آنتروپی",
+      "قدرت"
+    ]
+  },
+  {
+    "id": "text-counter",
+    "title": "شمارشگر متن",
+    "titleEn": "Text Counter",
+    "description": "شمارش کاراکتر، کلمه، خط، جمله و زمان مطالعه",
+    "category": "text",
+    "keywords": [
+      "count",
+      "word",
+      "character",
+      "شمارش",
+      "کلمه",
+      "کاراکتر",
+      "خط"
+    ],
+    "featured": true
+  },
+  {
+    "id": "case-converter",
+    "title": "تبدیل حالت حروف",
+    "titleEn": "Case Converter",
+    "description": "camelCase، snake_case، kebab-case، Title Case و بیشتر",
+    "category": "text",
+    "keywords": [
+      "case",
+      "camel",
+      "snake",
+      "kebab",
+      "حالت",
+      "بزرگ",
+      "کوچک"
+    ]
+  },
+  {
+    "id": "line-tools",
+    "title": "ابزار خطوط",
+    "titleEn": "Line Tools",
+    "description": "مرتب‌سازی، حذف تکراری، معکوس، بُرزدن و شماره‌گذاری خطوط",
+    "category": "text",
+    "keywords": [
+      "sort",
+      "lines",
+      "خط",
+      "مرتب",
+      "تکراری",
+      "dedupe",
+      "reverse"
+    ]
+  },
+  {
+    "id": "find-replace",
+    "title": "یافتن و جایگزینی",
+    "titleEn": "Find & Replace",
+    "description": "جایگزینی متن با پشتیبانی از regex و حالت حساس به حروف",
+    "category": "text",
+    "keywords": [
+      "find",
+      "replace",
+      "جایگزین",
+      "یافتن",
+      "regex"
+    ]
+  },
+  {
+    "id": "text-diff",
+    "title": "تفاوت دو متن",
+    "titleEn": "Text Diff",
+    "description": "مقایسه‌ی خط‌به‌خط دو متن و نمایش تفاوت‌ها",
+    "category": "text",
+    "keywords": [
+      "diff",
+      "compare",
+      "تفاوت",
+      "مقایسه",
+      "difference"
+    ]
+  },
+  {
+    "id": "extract-text",
+    "title": "استخراج از متن",
+    "titleEn": "Extract from Text",
+    "description": "استخراج ایمیل، URL، IP، شماره و اعداد از متن",
+    "category": "text",
+    "keywords": [
+      "extract",
+      "email",
+      "url",
+      "ip",
+      "استخراج",
+      "ایمیل",
+      "عدد"
+    ]
+  },
+  {
+    "id": "regex-tester",
+    "title": "آزمونگر Regex",
+    "titleEn": "Regex Tester",
+    "description": "تست عبارت باقاعده با هایلایت، گروه‌ها و فلگ‌ها",
+    "category": "regex",
+    "keywords": [
+      "regex",
+      "regexp",
+      "باقاعده",
+      "pattern",
+      "match",
+      "test"
+    ],
+    "featured": true
+  },
+  {
+    "id": "json-formatter",
+    "title": "قالب‌بند JSON",
+    "titleEn": "JSON Formatter",
+    "description": "زیباسازی، فشرده‌سازی و اعتبارسنجی JSON",
+    "category": "data",
+    "keywords": [
+      "json",
+      "format",
+      "beautify",
+      "minify",
+      "قالب",
+      "validate"
+    ],
+    "featured": true
+  },
+  {
+    "id": "json-yaml",
+    "title": "تبدیل JSON و YAML",
+    "titleEn": "JSON ↔ YAML",
+    "description": "تبدیل دوطرفه‌ی JSON و YAML",
+    "category": "data",
+    "keywords": [
+      "json",
+      "yaml",
+      "yml",
+      "convert",
+      "تبدیل"
+    ]
+  },
+  {
+    "id": "csv-json",
+    "title": "تبدیل CSV و JSON",
+    "titleEn": "CSV ↔ JSON",
+    "description": "تبدیل دوطرفه‌ی CSV و JSON با تشخیص جداکننده",
+    "category": "table",
+    "keywords": [
+      "csv",
+      "json",
+      "table",
+      "جدول",
+      "convert",
+      "تبدیل"
+    ]
+  },
+  {
+    "id": "color-converter",
+    "title": "تبدیل رنگ",
+    "titleEn": "Color Converter",
+    "description": "تبدیل میان HEX، RGB، HSL و HSV با انتخابگر رنگ",
+    "category": "color",
+    "keywords": [
+      "color",
+      "hex",
+      "rgb",
+      "hsl",
+      "رنگ",
+      "picker",
+      "تبدیل"
+    ],
+    "featured": true
+  },
+  {
+    "id": "contrast-checker",
+    "title": "بررسی کنتراست رنگ",
+    "titleEn": "Contrast Checker",
+    "description": "محاسبه‌ی نسبت کنتراست و انطباق با WCAG",
+    "category": "color",
+    "keywords": [
+      "contrast",
+      "wcag",
+      "کنتراست",
+      "a11y",
+      "accessibility"
+    ]
+  },
+  {
+    "id": "number-base",
+    "title": "تبدیل مبنای عدد",
+    "titleEn": "Number Base Converter",
+    "description": "تبدیل میان دودویی، هشت‌هشتی، ده‌دهی، شانزده‌گانه و Base36",
+    "category": "units",
+    "keywords": [
+      "binary",
+      "hex",
+      "octal",
+      "base",
+      "مبنا",
+      "دودویی",
+      "عدد"
+    ]
+  },
+  {
+    "id": "unit-converter",
+    "title": "تبدیل واحدها",
+    "titleEn": "Unit Converter",
+    "description": "طول، وزن، دما، سرعت، حجم، داده و بیشتر",
+    "category": "units",
+    "keywords": [
+      "unit",
+      "length",
+      "weight",
+      "temperature",
+      "واحد",
+      "تبدیل",
+      "متر"
+    ],
+    "featured": true
+  },
+  {
+    "id": "timestamp",
+    "title": "تبدیل Timestamp",
+    "titleEn": "Unix Timestamp Converter",
+    "description": "تبدیل Unix timestamp به تاریخ و بالعکس",
+    "category": "datetime",
+    "keywords": [
+      "timestamp",
+      "unix",
+      "epoch",
+      "زمان",
+      "تاریخ",
+      "date"
+    ],
+    "featured": true
+  },
+  {
+    "id": "url-parser",
+    "title": "تجزیه‌گر URL",
+    "titleEn": "URL Parser",
+    "description": "تجزیه‌ی آدرس به اجزا و نمایش پارامترهای کوئری",
+    "category": "url",
+    "keywords": [
+      "url",
+      "parse",
+      "query",
+      "آدرس",
+      "تجزیه",
+      "پارامتر"
+    ]
+  },
+  {
+    "id": "slug",
+    "title": "مولد Slug",
+    "titleEn": "Slug Generator",
+    "description": "ساخت اسلاگ مناسب URL از متن (با پشتیبانی فارسی)",
+    "category": "url",
+    "keywords": [
+      "slug",
+      "اسلاگ",
+      "url",
+      "permalink",
+      "نامک"
+    ]
+  },
+  {
+    "id": "uuid",
+    "title": "مولد UUID",
+    "titleEn": "UUID Generator",
+    "description": "تولید UUID نسخه ۴ و شناسه‌های یکتای تصادفی",
+    "category": "generators",
+    "keywords": [
+      "uuid",
+      "guid",
+      "شناسه",
+      "random",
+      "v4"
+    ],
+    "featured": true
+  },
+  {
+    "id": "password-generator",
+    "title": "مولد رمز عبور",
+    "titleEn": "Password Generator",
+    "description": "ساخت رمز عبور قوی و قابل تنظیم با تصادف امن",
+    "category": "generators",
+    "keywords": [
+      "password",
+      "رمز",
+      "generate",
+      "تولید",
+      "secure",
+      "تصادفی"
+    ],
+    "featured": true
+  },
+  {
+    "id": "lorem-ipsum",
+    "title": "مولد متن ساختگی",
+    "titleEn": "Lorem Ipsum Generator",
+    "description": "تولید متن نمونه (لاتین و فارسی) برای طراحی",
+    "category": "generators",
+    "keywords": [
+      "lorem",
+      "ipsum",
+      "متن ساختگی",
+      "placeholder",
+      "نمونه"
+    ]
+  },
+  {
+    "id": "qr-code",
+    "title": "مولد QR کد",
+    "titleEn": "QR Code Generator",
+    "description": "ساخت QR کد از متن یا URL و دانلود به‌صورت PNG/SVG",
+    "category": "generators",
+    "keywords": [
+      "qr",
+      "qrcode",
+      "بارکد",
+      "code",
+      "کد"
+    ],
+    "featured": true
+  },
+  {
+    "id": "user-agent",
+    "title": "اطلاعات مرورگر و دستگاه",
+    "titleEn": "Browser & Device Info",
+    "description": "تجزیه‌ی User-Agent و نمایش قابلیت‌های مرورگر فعلی",
+    "category": "browser",
+    "keywords": [
+      "user agent",
+      "browser",
+      "device",
+      "مرورگر",
+      "دستگاه",
+      "ua"
+    ]
+  },
+  {
+    "id": "http-status",
+    "title": "مرجع کدهای وضعیت HTTP",
+    "titleEn": "HTTP Status Codes",
+    "description": "فهرست و توضیح کدهای وضعیت HTTP با جست‌وجو",
+    "category": "reference",
+    "keywords": [
+      "http",
+      "status",
+      "code",
+      "وضعیت",
+      "404",
+      "500",
+      "مرجع"
+    ]
+  },
+  {
+    "id": "aria-reference",
+    "title": "مرجع ARIA",
+    "titleEn": "ARIA Reference",
+    "description": "مرجع جست‌وجوپذیر نقش‌ها (role) و حالت‌ها/ویژگی‌های پرکاربرد ARIA همراه با توضیح فارسی.",
+    "category": "a11y",
+    "keywords": [
+      "aria",
+      "نقش",
+      "role",
+      "دسترس پذیری",
+      "accessibility",
+      "wai-aria",
+      "مرجع",
+      "reference"
+    ]
+  },
+  {
+    "id": "subtitle-converter",
+    "title": "تبدیل زیرنویس",
+    "titleEn": "Subtitle Converter",
+    "description": "تبدیل دوسویه زیرنویس SRT و VTT با مدیریت مهرزمانی کاما/نقطه و سرتیتر WEBVTT.",
+    "category": "a11y",
+    "keywords": [
+      "زیرنویس",
+      "subtitle",
+      "srt",
+      "vtt",
+      "webvtt",
+      "caption",
+      "تبدیل",
+      "convert"
+    ]
+  },
+  {
+    "id": "touch-target",
+    "title": "اندازه هدف لمسی",
+    "titleEn": "Touch Target Size",
+    "description": "بررسی اندازه هدف لمسی بر اساس WCAG 2.5.5 (۴۴px) و 2.5.8 (۲۴px) با نشان قبولی/ردی و نمای بصری.",
+    "category": "a11y",
+    "keywords": [
+      "هدف لمسی",
+      "touch target",
+      "wcag",
+      "دسترس پذیری",
+      "accessibility",
+      "tap target",
+      "اندازه",
+      "44px"
+    ]
+  },
+  {
+    "id": "curl-builder",
+    "title": "سازنده cURL",
+    "titleEn": "cURL Builder",
+    "description": "ساخت دستور curl از روی متد، آدرس، هدرها، بدنه و احراز هویت Basic با خروجی آمادهٔ کپی.",
+    "category": "api",
+    "keywords": [
+      "curl",
+      "request",
+      "درخواست",
+      "http",
+      "header",
+      "builder",
+      "api",
+      "ساخت"
+    ]
+  },
+  {
+    "id": "curl-to-code",
+    "title": "cURL به کد",
+    "titleEn": "cURL to Code",
+    "description": "تجزیه دستور curl و تولید قطعه‌کد fetch() و axios در جاوااسکریپت.",
+    "category": "api",
+    "keywords": [
+      "curl",
+      "fetch",
+      "axios",
+      "code",
+      "javascript",
+      "تبدیل",
+      "کد",
+      "api"
+    ]
+  },
+  {
+    "id": "auth-header",
+    "title": "هدر احراز هویت",
+    "titleEn": "Authorization Header",
+    "description": "ساخت هدر Basic و Bearer و تجزیهٔ هدر Authorization (رمزگشایی Basic و دیکد JWT برای Bearer).",
+    "category": "api",
+    "keywords": [
+      "authorization",
+      "احراز هویت",
+      "basic",
+      "bearer",
+      "jwt",
+      "token",
+      "header",
+      "هدر"
+    ]
+  },
+  {
+    "id": "cache-control",
+    "title": "هدر Cache-Control",
+    "titleEn": "Cache-Control Builder/Parser",
+    "description": "ساخت مقدار Cache-Control از گزینه‌ها (max-age، no-store و …) و تجزیهٔ آن با توضیح فارسی هر دایرکتیو.",
+    "category": "api",
+    "keywords": [
+      "cache-control",
+      "کش",
+      "http",
+      "max-age",
+      "no-store",
+      "header",
+      "هدر",
+      "directive"
+    ]
+  },
+  {
+    "id": "feature-detector",
+    "title": "تشخیص قابلیت‌ها",
+    "titleEn": "Feature Detector",
+    "description": "نمایش جدول پشتیبانی مرورگر از قابلیت‌هایی مانند WebGL، WebGPU، WebRTC، WebAssembly و موارد دیگر.",
+    "category": "browser",
+    "keywords": [
+      "feature",
+      "قابلیت",
+      "webgl",
+      "webgpu",
+      "webrtc",
+      "wasm",
+      "پشتیبانی",
+      "support"
+    ]
+  },
+  {
+    "id": "screen-info",
+    "title": "اطلاعات صفحه",
+    "titleEn": "Screen Info",
+    "description": "نمایش زنده ابعاد صفحه و پنجره، نسبت پیکسل، عمق رنگ، جهت‌گیری و وضعیت اتصال.",
+    "category": "browser",
+    "keywords": [
+      "screen",
+      "صفحه",
+      "viewport",
+      "resolution",
+      "وضوح",
+      "devicePixelRatio",
+      "orientation"
+    ]
+  },
+  {
+    "id": "keycode-inspector",
+    "title": "بازرس کلید",
+    "titleEn": "Keycode Inspector",
+    "description": "نمایش key، code، keyCode و کلیدهای تغییردهنده (Ctrl/Alt/Shift/Meta) برای هر کلید فشرده‌شده.",
+    "category": "browser",
+    "keywords": [
+      "keycode",
+      "کلید",
+      "keyboard",
+      "صفحه‌کلید",
+      "event.key",
+      "event.code",
+      "keydown"
+    ]
+  },
+  {
+    "id": "sql-formatter",
+    "title": "قالب‌بند SQL",
+    "titleEn": "SQL Formatter",
+    "description": "زیباسازی پرس‌وجوی SQL با بزرگ‌کردن کلیدواژه‌ها، خط جدید پیش از بندها و تورفتگی؛ به‌همراه گزینهٔ فشرده‌سازی.",
+    "category": "code",
+    "keywords": [
+      "sql",
+      "formatter",
+      "قالب‌بندی",
+      "minify",
+      "pretty",
+      "query",
+      "زیباسازی",
+      "پایگاه داده"
+    ]
+  },
+  {
+    "id": "cron-parser",
+    "title": "تفسیرگر Cron",
+    "titleEn": "Cron Parser",
+    "description": "تجزیه عبارت cron پنج‌بخشی، توضیح فارسی آن و محاسبهٔ پنج زمان اجرای بعدی.",
+    "category": "code",
+    "keywords": [
+      "cron",
+      "crontab",
+      "زمان‌بندی",
+      "schedule",
+      "تفسیر",
+      "next run",
+      "اجرا"
+    ]
+  },
+  {
+    "id": "semver-checker",
+    "title": "بررسی SemVer",
+    "titleEn": "SemVer Checker",
+    "description": "اعتبارسنجی نسخه، مقایسهٔ دو نسخه و آزمون سازگاری یک نسخه با بازه (^، ~، >=، x).",
+    "category": "code",
+    "keywords": [
+      "semver",
+      "version",
+      "نسخه",
+      "مقایسه",
+      "range",
+      "بازه",
+      "npm",
+      "اعتبارسنجی"
+    ]
+  },
+  {
+    "id": "mime-lookup",
+    "title": "جست‌وجوی MIME",
+    "titleEn": "MIME Type Lookup",
+    "description": "یافتن نوع MIME از روی پسوند فایل و بالعکس، با جدول جست‌وجوپذیر حدود ۸۰ نوع رایج.",
+    "category": "code",
+    "keywords": [
+      "mime",
+      "content-type",
+      "پسوند",
+      "extension",
+      "نوع فایل",
+      "lookup",
+      "جست‌وجو"
+    ]
+  },
+  {
+    "id": "glob-tester",
+    "title": "آزمونگر Glob",
+    "titleEn": "Glob Tester",
+    "description": "آزمودن الگوی glob روی فهرستی از مسیرها و نمایش مسیرهای منطبق (*، **، ?، [abc]، {a,b}).",
+    "category": "code",
+    "keywords": [
+      "glob",
+      "pattern",
+      "الگو",
+      "match",
+      "wildcard",
+      "path",
+      "مسیر",
+      "آزمون"
+    ]
+  },
+  {
+    "id": "gitignore-tester",
+    "title": "آزمونگر gitignore",
+    "titleEn": ".gitignore Tester",
+    "description": "بررسی اینکه آیا یک مسیر بر اساس قوانین ‎.gitignore نادیده گرفته می‌شود (با پشتیبانی از نفی ! و dir/).",
+    "category": "code",
+    "keywords": [
+      "gitignore",
+      "git",
+      "ignore",
+      "نادیده",
+      "negation",
+      "pattern",
+      "مسیر",
+      "آزمون"
+    ]
+  },
+  {
+    "id": "stack-trace-formatter",
+    "title": "قالب‌بند Stack Trace",
+    "titleEn": "Stack Trace Formatter",
+    "description": "پاک‌سازی و مرتب‌سازی ردپای خطای JavaScript، Java یا Python با هم‌ترازی فریم‌ها.",
+    "category": "code",
+    "keywords": [
+      "stack trace",
+      "خطا",
+      "error",
+      "formatter",
+      "javascript",
+      "java",
+      "python",
+      "ردپا"
+    ]
+  },
+  {
+    "id": "dotenv-validator",
+    "title": "اعتبارسنج .env",
+    "titleEn": ".env Validator",
+    "description": "بررسی خطوط KEY=VALUE، گزارش مشکلات (کلید نامعتبر، فاصله، تکراری) و نمایش جدول کلید/مقدار.",
+    "category": "code",
+    "keywords": [
+      "dotenv",
+      "env",
+      "متغیر محیطی",
+      "validate",
+      "اعتبارسنجی",
+      "config",
+      "key value"
+    ]
+  },
+  {
+    "id": "color-palette",
+    "title": "مولد پالت رنگ",
+    "titleEn": "Color Palette",
+    "description": "ساخت پالت رنگ از یک رنگ پایه: روشن‌تر، تیره‌تر، مکمل، مشابه و سه‌گانه با کپی هر کد",
+    "category": "color",
+    "keywords": [
+      "palette",
+      "پالت",
+      "رنگ",
+      "color",
+      "tints",
+      "shades",
+      "complementary",
+      "مکمل"
+    ]
+  },
+  {
+    "id": "gradient-generator",
+    "title": "مولد گرادیان",
+    "titleEn": "Gradient Generator",
+    "description": "ساخت گرادیان CSS با چند ایست رنگ، زاویه و نوع خطی یا شعاعی همراه با پیش‌نمایش زنده",
+    "category": "color",
+    "keywords": [
+      "gradient",
+      "گرادیان",
+      "linear",
+      "radial",
+      "css",
+      "شیب رنگ",
+      "background",
+      "پس‌زمینه"
+    ]
+  },
+  {
+    "id": "shadow-generator",
+    "title": "مولد سایه",
+    "titleEn": "Box Shadow Generator",
+    "description": "ساخت box-shadow با کنترل افقی، عمودی، محو، گسترش، رنگ و حالت داخلی با پیش‌نمایش زنده",
+    "category": "color",
+    "keywords": [
+      "shadow",
+      "سایه",
+      "box-shadow",
+      "css",
+      "blur",
+      "inset",
+      "محو",
+      "افکت"
+    ]
+  },
+  {
+    "id": "border-radius-generator",
+    "title": "مولد گردی گوشه",
+    "titleEn": "Border Radius Generator",
+    "description": "تنظیم شعاع هر گوشه به‌صورت جداگانه و دریافت کد border-radius با پیش‌نمایش زنده",
+    "category": "color",
+    "keywords": [
+      "border-radius",
+      "گردی گوشه",
+      "radius",
+      "corner",
+      "css",
+      "گوشه",
+      "rounded",
+      "گرد"
+    ]
+  },
+  {
+    "id": "css-filter-generator",
+    "title": "مولد فیلتر CSS",
+    "titleEn": "CSS Filter Generator",
+    "description": "ساخت فیلتر CSS با لغزنده‌های محو، روشنایی، کنتراست، خاکستری، اشباع، سپیا و چرخش رنگ با پیش‌نمایش",
+    "category": "color",
+    "keywords": [
+      "filter",
+      "فیلتر",
+      "css",
+      "blur",
+      "brightness",
+      "contrast",
+      "grayscale",
+      "افکت"
+    ]
+  },
+  {
+    "id": "pbkdf2",
+    "title": "مشتق‌گیر PBKDF2",
+    "titleEn": "PBKDF2",
+    "description": "مشتق کلید از رمز عبور و نمک با PBKDF2 و انتخاب الگوریتم هش و طول کلید.",
+    "category": "crypto",
+    "keywords": [
+      "pbkdf2",
+      "کلید",
+      "مشتق کلید",
+      "key derivation",
+      "salt",
+      "نمک",
+      "رمزنگاری"
+    ]
+  },
+  {
+    "id": "aes-gcm",
+    "title": "رمزنگاری AES-GCM",
+    "titleEn": "AES-GCM Encrypt/Decrypt",
+    "description": "رمزنگاری و رمزگشایی متن با AES-GCM و عبارت‌عبور؛ خروجی Base64 شامل IV.",
+    "category": "crypto",
+    "keywords": [
+      "aes",
+      "aes-gcm",
+      "رمزنگاری",
+      "رمزگشایی",
+      "encrypt",
+      "decrypt",
+      "symmetric"
+    ]
+  },
+  {
+    "id": "rsa-keygen",
+    "title": "مولد کلید RSA",
+    "titleEn": "RSA Key Pair",
+    "description": "تولید جفت‌کلید RSA-OAEP ۲۰۴۸ بیتی و خروجی PEM برای کلید عمومی و خصوصی.",
+    "category": "crypto",
+    "keywords": [
+      "rsa",
+      "کلید",
+      "key pair",
+      "جفت کلید",
+      "pem",
+      "spki",
+      "pkcs8",
+      "رمزنگاری"
+    ]
+  },
+  {
+    "id": "ecdsa-keygen",
+    "title": "مولد کلید ECDSA",
+    "titleEn": "ECDSA Key Pair",
+    "description": "تولید جفت‌کلید ECDSA روی منحنی P-256 و خروجی PEM (SPKI/PKCS8).",
+    "category": "crypto",
+    "keywords": [
+      "ecdsa",
+      "ec",
+      "p-256",
+      "کلید",
+      "key pair",
+      "pem",
+      "امضا",
+      "elliptic"
+    ]
+  },
+  {
+    "id": "totp",
+    "title": "مولد TOTP",
+    "titleEn": "TOTP Generator",
+    "description": "تولید کد TOTP زنده از راز Base32 با بازه و تعداد رقم دلخواه و شمارش معکوس.",
+    "category": "crypto",
+    "keywords": [
+      "totp",
+      "otp",
+      "2fa",
+      "احراز هویت دو مرحله‌ای",
+      "base32",
+      "authenticator",
+      "کد یکبارمصرف"
+    ]
+  },
+  {
+    "id": "hotp",
+    "title": "مولد HOTP",
+    "titleEn": "HOTP Generator",
+    "description": "تولید کد HOTP از راز Base32 و شمارنده (counter) بر پایه HMAC-SHA1.",
+    "category": "crypto",
+    "keywords": [
+      "hotp",
+      "otp",
+      "counter",
+      "شمارنده",
+      "base32",
+      "hmac",
+      "کد یکبارمصرف"
+    ]
+  },
+  {
+    "id": "otp-uri",
+    "title": "مولد لینک OTP",
+    "titleEn": "OTP URI",
+    "description": "ساخت لینک otpauth:// برای TOTP/HOTP همراه با کد QR قابل اسکن در اپلیکیشن‌ها.",
+    "category": "crypto",
+    "keywords": [
+      "otpauth",
+      "otp",
+      "uri",
+      "qr",
+      "totp",
+      "hotp",
+      "authenticator",
+      "لینک"
+    ]
+  },
+  {
+    "id": "entropy-calculator",
+    "title": "محاسبه‌گر آنتروپی",
+    "titleEn": "Entropy Calculator",
+    "description": "محاسبه آنتروپی شانون متن ورودی: بیت بر کاراکتر، کل بیت‌ها و تعداد کاراکترها.",
+    "category": "crypto",
+    "keywords": [
+      "entropy",
+      "آنتروپی",
+      "shannon",
+      "شانون",
+      "تصادفی",
+      "randomness",
+      "bits"
+    ]
+  },
+  {
+    "id": "secret-scanner",
+    "title": "اسکنر رازها",
+    "titleEn": "Secret Scanner",
+    "description": "اسکن متن برای یافتن کلیدهای حساس مانند AWS، Google API، JWT و کلیدهای خصوصی.",
+    "category": "crypto",
+    "keywords": [
+      "secret",
+      "راز",
+      "scanner",
+      "اسکن",
+      "aws",
+      "api key",
+      "jwt",
+      "نشت"
+    ]
+  },
+  {
+    "id": "diceware",
+    "title": "عبارت‌عبور دایس‌ور",
+    "titleEn": "Diceware Passphrase",
+    "description": "تولید عبارت‌عبور قوی از واژگان انگلیسی ساده با تعداد و جداکننده دلخواه و برآورد آنتروپی.",
+    "category": "crypto",
+    "keywords": [
+      "diceware",
+      "passphrase",
+      "عبارت عبور",
+      "رمز عبور",
+      "password",
+      "آنتروپی",
+      "wordlist"
+    ]
+  },
+  {
+    "id": "json-to-typescript",
+    "title": "JSON به TypeScript",
+    "titleEn": "JSON to TypeScript",
+    "description": "تبدیل JSON به اینترفیس‌های TypeScript با تشخیص اشیاء تو‌در‌تو، آرایه‌ها و انواع اختیاری",
+    "category": "data",
+    "keywords": [
+      "json",
+      "typescript",
+      "ts",
+      "interface",
+      "اینترفیس",
+      "type",
+      "نوع",
+      "تایپ‌اسکریپت"
+    ]
+  },
+  {
+    "id": "json-path",
+    "title": "مسیریاب JSON",
+    "titleEn": "JSONPath Evaluator",
+    "description": "ارزیابی عبارت JSONPath روی داده JSON با پشتیبانی از $، کلید، اندیس و wildcard و نمایش نتایج",
+    "category": "data",
+    "keywords": [
+      "json",
+      "jsonpath",
+      "مسیر",
+      "path",
+      "query",
+      "پرس‌وجو",
+      "wildcard",
+      "ارزیابی"
+    ]
+  },
+  {
+    "id": "json-diff",
+    "title": "تفاوت JSON",
+    "titleEn": "JSON Diff",
+    "description": "مقایسه دو JSON و نمایش مسیرهای اضافه‌شده، حذف‌شده و تغییر‌یافته همراه با مقدار قدیم و جدید",
+    "category": "data",
+    "keywords": [
+      "json",
+      "diff",
+      "تفاوت",
+      "compare",
+      "مقایسه",
+      "تغییرات",
+      "اختلاف",
+      "delta"
+    ]
+  },
+  {
+    "id": "json-flatten",
+    "title": "تخت‌سازی JSON",
+    "titleEn": "JSON Flatten / Unflatten",
+    "description": "تبدیل JSON تو‌در‌تو به کلیدهای نقطه‌ای مسطح و بازگرداندن آن به ساختار تو‌در‌تو",
+    "category": "data",
+    "keywords": [
+      "json",
+      "flatten",
+      "تخت",
+      "unflatten",
+      "مسطح",
+      "dot",
+      "نقطه‌ای",
+      "کلید"
+    ]
+  },
+  {
+    "id": "ndjson",
+    "title": "تبدیل NDJSON",
+    "titleEn": "NDJSON ↔ JSON Array",
+    "description": "تبدیل دوطرفه NDJSON و آرایه JSON با اعتبارسنجی هر خط و گزارش خطوط نامعتبر",
+    "category": "data",
+    "keywords": [
+      "ndjson",
+      "jsonl",
+      "json lines",
+      "array",
+      "آرایه",
+      "خط",
+      "stream",
+      "تبدیل"
+    ]
+  },
+  {
+    "id": "xml-formatter",
+    "title": "قالب‌بند XML",
+    "titleEn": "XML Formatter",
+    "description": "زیباسازی یا فشرده‌سازی XML با تورفتگی خودکار و تشخیص خطاهای تجزیه با DOMParser",
+    "category": "data",
+    "keywords": [
+      "xml",
+      "format",
+      "قالب",
+      "pretty",
+      "زیباسازی",
+      "minify",
+      "فشرده",
+      "indent"
+    ]
+  },
+  {
+    "id": "xml-json",
+    "title": "تبدیل XML و JSON",
+    "titleEn": "XML ↔ JSON",
+    "description": "تبدیل دوطرفه XML و JSON با نگاشت معقول عناصر و صفت‌ها (پیشوند @ برای صفت و #text برای متن)",
+    "category": "data",
+    "keywords": [
+      "xml",
+      "json",
+      "convert",
+      "تبدیل",
+      "attribute",
+      "صفت",
+      "element",
+      "نگاشت"
+    ]
+  },
+  {
+    "id": "config-parser",
+    "title": "تجزیه‌گر تنظیمات",
+    "titleEn": "Config Parser",
+    "description": "تجزیه فایل‌های تنظیمات INI، ‎.env و ‎.properties و تبدیل آن‌ها به JSON",
+    "category": "data",
+    "keywords": [
+      "config",
+      "تنظیمات",
+      "ini",
+      "env",
+      "properties",
+      "parse",
+      "تجزیه",
+      "dotenv"
+    ]
+  },
+  {
+    "id": "markdown-html",
+    "title": "تبدیل Markdown و HTML",
+    "titleEn": "Markdown ↔ HTML",
+    "description": "تبدیل Markdown به HTML و HTML به Markdown به‌صورت دوطرفه با پشتیبانی GFM",
+    "category": "data",
+    "keywords": [
+      "markdown",
+      "مارک‌داون",
+      "html",
+      "md",
+      "gfm",
+      "convert",
+      "تبدیل",
+      "turndown"
+    ]
+  },
+  {
+    "id": "markdown-preview",
+    "title": "پیش‌نمایش Markdown",
+    "titleEn": "Markdown Preview",
+    "description": "ویرایشگر Markdown با پیش‌نمایش زنده و استایل‌دار در کنار آن (عنوان، فهرست، کد و جدول)",
+    "category": "data",
+    "keywords": [
+      "markdown",
+      "مارک‌داون",
+      "preview",
+      "پیش‌نمایش",
+      "md",
+      "render",
+      "زنده",
+      "live"
+    ]
+  },
+  {
+    "id": "html-formatter",
+    "title": "قالب‌بند HTML",
+    "titleEn": "HTML Formatter",
+    "description": "زیباسازی یا فشرده‌سازی HTML با تورفتگی بر اساس تگ‌ها و حفظ محتوای pre و script",
+    "category": "data",
+    "keywords": [
+      "html",
+      "format",
+      "قالب",
+      "pretty",
+      "زیباسازی",
+      "minify",
+      "فشرده",
+      "indent"
+    ]
+  },
+  {
+    "id": "svg-optimizer",
+    "title": "بهینه‌ساز SVG",
+    "titleEn": "SVG Optimizer",
+    "description": "حذف کامنت‌ها، metadata، اعلان XML و فاصله‌های اضافی SVG با نمایش حجم و پیش‌نمایش زنده",
+    "category": "data",
+    "keywords": [
+      "svg",
+      "optimize",
+      "بهینه",
+      "minify",
+      "فشرده",
+      "vector",
+      "وکتور",
+      "icon"
+    ]
+  },
+  {
+    "id": "css-selector-tester",
+    "title": "آزمونگر سلکتور CSS",
+    "titleEn": "CSS Selector Tester",
+    "description": "اجرای یک سلکتور CSS روی HTML با querySelectorAll و نمایش تعداد و کد عناصر تطبیق‌یافته",
+    "category": "data",
+    "keywords": [
+      "css",
+      "selector",
+      "سلکتور",
+      "queryselector",
+      "html",
+      "match",
+      "تطبیق",
+      "آزمون"
+    ]
+  },
+  {
+    "id": "timezone-converter",
+    "title": "تبدیل منطقه زمانی",
+    "titleEn": "Timezone Converter",
+    "description": "تبدیل تاریخ و ساعت میان مناطق زمانی مختلف (IANA) شامل Asia/Tehran با Intl.DateTimeFormat",
+    "category": "datetime",
+    "keywords": [
+      "timezone",
+      "منطقه زمانی",
+      "tehran",
+      "تهران",
+      "utc",
+      "iana",
+      "ساعت",
+      "convert"
+    ]
+  },
+  {
+    "id": "date-diff",
+    "title": "اختلاف تاریخ",
+    "titleEn": "Date Difference",
+    "description": "محاسبه‌ی اختلاف دو تاریخ به روز، هفته، ماه، سال و ساعت و افزودن یا کم کردن روز و ماه",
+    "category": "datetime",
+    "keywords": [
+      "date diff",
+      "اختلاف تاریخ",
+      "روز",
+      "days",
+      "add",
+      "subtract",
+      "محاسبه تاریخ"
+    ]
+  },
+  {
+    "id": "date-info",
+    "title": "اطلاعات تاریخ",
+    "titleEn": "Date Info",
+    "description": "شماره‌ی هفته‌ی ISO، روز سال، سه‌ماهه، نام روز هفته (فارسی) و تشخیص سال کبیسه",
+    "category": "datetime",
+    "keywords": [
+      "date info",
+      "week number",
+      "هفته",
+      "روز سال",
+      "leap year",
+      "کبیسه",
+      "quarter",
+      "سه‌ماهه"
+    ]
+  },
+  {
+    "id": "duration-formatter",
+    "title": "قالب‌بند مدت‌زمان",
+    "titleEn": "Duration Formatter",
+    "description": "تبدیل ثانیه یا میلی‌ثانیه به قالب خوانا و ISO-8601 (PT1H2M3S) و تجزیه‌ی متن مانند 1h2m",
+    "category": "datetime",
+    "keywords": [
+      "duration",
+      "مدت زمان",
+      "iso 8601",
+      "format",
+      "seconds",
+      "ثانیه",
+      "parse"
+    ]
+  },
+  {
+    "id": "relative-time",
+    "title": "زمان نسبی",
+    "titleEn": "Relative Time",
+    "description": "نمایش فاصله‌ی زمانی به‌صورت نسبی مانند «۳ روز پیش» با Intl.RelativeTimeFormat فارسی",
+    "category": "datetime",
+    "keywords": [
+      "relative time",
+      "زمان نسبی",
+      "ago",
+      "پیش",
+      "intl",
+      "fa",
+      "since"
+    ]
+  },
+  {
+    "id": "stopwatch",
+    "title": "کرنومتر",
+    "titleEn": "Stopwatch",
+    "description": "کرنومتر دقیق با شروع، توقف، بازنشانی و ثبت دورها به‌صورت mm:ss.cs با performance.now",
+    "category": "datetime",
+    "keywords": [
+      "stopwatch",
+      "کرنومتر",
+      "timer",
+      "lap",
+      "دور",
+      "زمان‌سنج",
+      "chronometer"
+    ]
+  },
+  {
+    "id": "countdown-timer",
+    "title": "تایمر شمارش معکوس",
+    "titleEn": "Countdown Timer",
+    "description": "شمارش معکوس زنده بر اساس مدت‌زمان یا تاریخ هدف همراه با اعلان پایان زمان",
+    "category": "datetime",
+    "keywords": [
+      "countdown",
+      "شمارش معکوس",
+      "timer",
+      "تایمر",
+      "alarm",
+      "هدف",
+      "deadline"
+    ]
+  },
+  {
+    "id": "jalali-converter",
+    "title": "مبدل تاریخ شمسی و میلادی",
+    "titleEn": "Jalali ↔ Gregorian Date",
+    "description": "تبدیل تاریخ شمسی (جلالی) و میلادی با انتخابگر تاریخ و جعبه‌ی تبدیل سریع (نوشتن یا چسباندن)",
+    "category": "datetime",
+    "keywords": [
+      "jalali",
+      "shamsi",
+      "شمسی",
+      "جلالی",
+      "میلادی",
+      "gregorian",
+      "تقویم",
+      "date",
+      "تاریخ"
+    ],
+    "featured": true
+  },
+  {
+    "id": "tree-generator",
+    "title": "مولد درخت پوشه",
+    "titleEn": "Folder Tree Generator",
+    "description": "تبدیل فهرست تورفته (با فاصله یا تب) به درخت اَسکی زیبا با اتصال‌دهنده‌های ├─، └─ و │.",
+    "category": "diagram",
+    "keywords": [
+      "tree",
+      "درخت",
+      "folder",
+      "پوشه",
+      "ascii",
+      "directory",
+      "ساختار",
+      "indent"
+    ]
+  },
+  {
+    "id": "string-escape",
+    "title": "فرار رشته",
+    "titleEn": "String Escape",
+    "description": "escape و unescape رشته برای XML، JSON، JavaScript، CSS، SQL، Shell، Markdown و RegExp",
+    "category": "encoding",
+    "keywords": [
+      "escape",
+      "unescape",
+      "فرار",
+      "json",
+      "xml",
+      "sql",
+      "regexp",
+      "string"
+    ]
+  },
+  {
+    "id": "base-encoder",
+    "title": "کدگذار Base32/58/85",
+    "titleEn": "Base32 / Base58 / Base85",
+    "description": "کدگذاری و رمزگشایی با Base32 (RFC4648)، Base58 (Bitcoin) و Base85 (Ascii85)",
+    "category": "encoding",
+    "keywords": [
+      "base32",
+      "base58",
+      "base85",
+      "ascii85",
+      "بیت‌کوین",
+      "encode",
+      "decode",
+      "رمزگذاری"
+    ]
+  },
+  {
+    "id": "binary-text",
+    "title": "تبدیل متن و باینری",
+    "titleEn": "Text ↔ Binary",
+    "description": "تبدیل متن به باینری هشت‌بیتی جداشده با فاصله و بالعکس",
+    "category": "encoding",
+    "keywords": [
+      "binary",
+      "باینری",
+      "دودویی",
+      "bits",
+      "بیت",
+      "text",
+      "متن"
+    ]
+  },
+  {
+    "id": "ascii-converter",
+    "title": "تبدیل ASCII",
+    "titleEn": "ASCII Converter",
+    "description": "نمایش کد اعشاری، شانزده‌ای و باینری هر کاراکتر و تبدیل کدها به متن",
+    "category": "encoding",
+    "keywords": [
+      "ascii",
+      "اسکی",
+      "char",
+      "code",
+      "dec",
+      "hex",
+      "binary",
+      "کاراکتر"
+    ]
+  },
+  {
+    "id": "unicode-inspector",
+    "title": "بازرس یونیکد",
+    "titleEn": "Unicode Inspector",
+    "description": "بررسی هر نقطه‌کد: کاراکتر، U+XXXX، اعشاری و بایت‌های UTF-8 به‌صورت hex",
+    "category": "encoding",
+    "keywords": [
+      "unicode",
+      "یونیکد",
+      "codepoint",
+      "نقطه‌کد",
+      "utf-8",
+      "code point",
+      "hex"
+    ]
+  },
+  {
+    "id": "unicode-normalize",
+    "title": "نرمال‌ساز یونیکد",
+    "titleEn": "Unicode Normalizer",
+    "description": "نرمال‌سازی متن با فرم‌های NFC، NFD، NFKC و NFKD و مقایسه طول",
+    "category": "encoding",
+    "keywords": [
+      "unicode",
+      "یونیکد",
+      "normalize",
+      "نرمال",
+      "nfc",
+      "nfd",
+      "nfkc",
+      "nfkd"
+    ]
+  },
+  {
+    "id": "punycode",
+    "title": "Punycode",
+    "titleEn": "Punycode",
+    "description": "تبدیل دامنه و متن به Punycode و رمزگشایی دامنه‌های xn-- طبق RFC3492",
+    "category": "encoding",
+    "keywords": [
+      "punycode",
+      "پانی‌کد",
+      "idn",
+      "domain",
+      "دامنه",
+      "xn--",
+      "rfc3492"
+    ]
+  },
+  {
+    "id": "basic-auth",
+    "title": "هدر Basic Auth",
+    "titleEn": "Basic Auth Header",
+    "description": "ساخت هدر Authorization از نام کاربری و رمز و رمزگشایی هدر Basic",
+    "category": "encoding",
+    "keywords": [
+      "basic auth",
+      "authorization",
+      "هدر",
+      "header",
+      "base64",
+      "احراز هویت"
+    ]
+  },
+  {
+    "id": "data-uri",
+    "title": "مولد Data URI",
+    "titleEn": "Data URI",
+    "description": "ساخت data: URI از متن یا فایل و رمزگشایی data URI برای پیش‌نمایش یا دانلود",
+    "category": "encoding",
+    "keywords": [
+      "data uri",
+      "data url",
+      "base64",
+      "mime",
+      "file",
+      "فایل",
+      "دیتا"
+    ]
+  },
+  {
+    "id": "quoted-printable",
+    "title": "Quoted-Printable",
+    "titleEn": "Quoted-Printable",
+    "description": "کدگذاری و رمزگشایی Quoted-Printable مورد استفاده در ایمیل (MIME)",
+    "category": "encoding",
+    "keywords": [
+      "quoted-printable",
+      "qp",
+      "mime",
+      "email",
+      "ایمیل",
+      "encode",
+      "decode"
+    ]
+  },
+  {
+    "id": "nato-phonetic",
+    "title": "الفبای ناتو",
+    "titleEn": "NATO Phonetic",
+    "description": "تبدیل متن به الفبای آوایی ناتو (Alpha, Bravo …) همراه با ارقام",
+    "category": "encoding",
+    "keywords": [
+      "nato",
+      "ناتو",
+      "phonetic",
+      "آوایی",
+      "alpha",
+      "bravo",
+      "الفبا"
+    ]
+  },
+  {
+    "id": "braille",
+    "title": "بریل",
+    "titleEn": "Braille",
+    "description": "تبدیل دوطرفه متن و بریل یونیکد درجه ۱ (حروف، ارقام و نقطه‌گذاری پایه)",
+    "category": "encoding",
+    "keywords": [
+      "braille",
+      "بریل",
+      "نابینا",
+      "unicode",
+      "grade 1",
+      "dots",
+      "نقطه"
+    ]
+  },
+  {
+    "id": "file-hash",
+    "title": "هش فایل",
+    "titleEn": "File Hash",
+    "description": "محاسبه هش SHA-1، SHA-256 و SHA-512 یک فایل با crypto.subtle همراه با نمایش حجم و کپی هگز",
+    "category": "file",
+    "keywords": [
+      "hash",
+      "هش",
+      "sha",
+      "sha256",
+      "sha512",
+      "checksum",
+      "چک‌سام",
+      "file"
+    ]
+  },
+  {
+    "id": "file-size-formatter",
+    "title": "قالب‌بند حجم فایل",
+    "titleEn": "File Size Formatter",
+    "description": "تبدیل دوطرفه بایت به واحدهای خوانا با هر دو مبنای ده‌دهی (KB/MB/GB) و دودویی (KiB/MiB/GiB)",
+    "category": "file",
+    "keywords": [
+      "size",
+      "حجم",
+      "bytes",
+      "بایت",
+      "kb",
+      "mb",
+      "gb",
+      "kib",
+      "mib",
+      "binary"
+    ]
+  },
+  {
+    "id": "hex-dump",
+    "title": "نمایش‌گر Hex",
+    "titleEn": "Hex Dump",
+    "description": "نمایش بایت‌های فایل یا متن به سبک xxd با ستون آفست، بایت‌های هگز و معادل اسکی در ردیف‌های ۱۶ بایتی",
+    "category": "file",
+    "keywords": [
+      "hex",
+      "هگز",
+      "dump",
+      "xxd",
+      "binary",
+      "دودویی",
+      "bytes",
+      "ascii"
+    ]
+  },
+  {
+    "id": "base64-file",
+    "title": "Base64 فایل",
+    "titleEn": "Base64 File",
+    "description": "تبدیل فایل به Base64 و Data URI و رمزگشایی Base64 یا Data URI به فایل قابل دانلود",
+    "category": "file",
+    "keywords": [
+      "base64",
+      "بیس۶۴",
+      "file",
+      "فایل",
+      "data uri",
+      "encode",
+      "decode",
+      "رمزگشایی"
+    ]
+  },
+  {
+    "id": "gzip-tool",
+    "title": "فشرده‌سازی Gzip",
+    "titleEn": "Gzip / Deflate",
+    "description": "فشرده‌سازی متن با الگوریتم Gzip یا Deflate و خروجی Base64 و بازگشایی Base64 به متن",
+    "category": "file",
+    "keywords": [
+      "gzip",
+      "deflate",
+      "فشرده",
+      "compress",
+      "زیپ",
+      "zip",
+      "decompress",
+      "base64"
+    ]
+  },
+  {
+    "id": "line-ending-converter",
+    "title": "تبدیل پایان خط",
+    "titleEn": "Line Ending Converter",
+    "description": "تشخیص نوع پایان خط (LF/CRLF/CR/مخلوط) و تبدیل آن به LF، CRLF یا CR همراه با شمارش خطوط",
+    "category": "file",
+    "keywords": [
+      "line ending",
+      "پایان خط",
+      "lf",
+      "crlf",
+      "cr",
+      "eol",
+      "newline",
+      "خط جدید"
+    ]
+  },
+  {
+    "id": "loan-calculator",
+    "title": "ماشین‌حساب وام",
+    "titleEn": "Loan Calculator",
+    "description": "محاسبه‌ی قسط ماهانه، مجموع پرداختی و سود وام همراه با جدول استهلاک چند قسط نخست",
+    "category": "finance",
+    "keywords": [
+      "loan",
+      "وام",
+      "installment",
+      "قسط",
+      "amortization",
+      "استهلاک",
+      "interest"
+    ]
+  },
+  {
+    "id": "interest-calculator",
+    "title": "ماشین‌حساب سود",
+    "titleEn": "Interest Calculator",
+    "description": "محاسبه‌ی سود مرکب، نرخ رشد مرکب سالانه (CAGR) و بازده سرمایه‌گذاری (ROI)",
+    "category": "finance",
+    "keywords": [
+      "interest",
+      "سود",
+      "compound",
+      "مرکب",
+      "cagr",
+      "roi",
+      "investment",
+      "سرمایه"
+    ]
+  },
+  {
+    "id": "discount-vat-calculator",
+    "title": "تخفیف و مالیات",
+    "titleEn": "Discount & VAT",
+    "description": "محاسبه‌ی قیمت پس از تخفیف، حاشیه‌ی سود و افزایش قیمت و افزودن یا کسر مالیات بر ارزش افزوده",
+    "category": "finance",
+    "keywords": [
+      "discount",
+      "تخفیف",
+      "vat",
+      "مالیات",
+      "margin",
+      "حاشیه سود",
+      "markup",
+      "tax"
+    ]
+  },
+  {
+    "id": "salary-converter",
+    "title": "تبدیل حقوق",
+    "titleEn": "Salary Converter",
+    "description": "تبدیل دستمزد میان ساعتی، ماهانه و سالانه بر اساس ساعت کار هفتگی و هفته‌های کاری سال",
+    "category": "finance",
+    "keywords": [
+      "salary",
+      "حقوق",
+      "wage",
+      "دستمزد",
+      "hourly",
+      "ساعتی",
+      "annual",
+      "سالانه"
+    ]
+  },
+  {
+    "id": "currency-formatter",
+    "title": "قالب‌بند ارز",
+    "titleEn": "Currency Formatter",
+    "description": "قالب‌بندی مبلغ با واحد پول و زبان دلخواه از طریق Intl.NumberFormat همراه با مبدل ریال و تومان",
+    "category": "finance",
+    "keywords": [
+      "currency",
+      "ارز",
+      "format",
+      "rial",
+      "ریال",
+      "toman",
+      "تومان",
+      "intl"
+    ]
+  },
+  {
+    "id": "nanoid",
+    "title": "مولد NanoID",
+    "titleEn": "NanoID Generator",
+    "description": "تولید شناسه‌های یکتای کوتاه و امن NanoID با انتخاب طول و تعداد، همراه با کپی و تولید مجدد.",
+    "category": "generators",
+    "keywords": [
+      "nanoid",
+      "نانوآی‌دی",
+      "id",
+      "شناسه",
+      "یکتا",
+      "unique",
+      "random",
+      "تصادفی"
+    ]
+  },
+  {
+    "id": "ulid",
+    "title": "مولد ULID",
+    "titleEn": "ULID Generator",
+    "description": "تولید شناسه ULID مرتب‌پذیر بر اساس زمان (۴۸ بیت زمان + ۸۰ بیت تصادفی) با کدگذاری Crockford Base32.",
+    "category": "generators",
+    "keywords": [
+      "ulid",
+      "id",
+      "شناسه",
+      "sortable",
+      "مرتب",
+      "timestamp",
+      "base32",
+      "یکتا"
+    ]
+  },
+  {
+    "id": "pin-generator",
+    "title": "مولد پین",
+    "titleEn": "PIN Generator",
+    "description": "تولید کد پین عددی تصادفی و امن با انتخاب طول و تعداد و امکان مجاز کردن صفر ابتدایی.",
+    "category": "generators",
+    "keywords": [
+      "pin",
+      "پین",
+      "code",
+      "کد",
+      "عددی",
+      "otp",
+      "تصادفی",
+      "random"
+    ]
+  },
+  {
+    "id": "random-string",
+    "title": "رشته تصادفی",
+    "titleEn": "Random String Generator",
+    "description": "ساخت رشته‌های تصادفی امن با انتخاب مجموعه نویسه‌ها (کوچک، بزرگ، ارقام، نمادها)، طول و تعداد.",
+    "category": "generators",
+    "keywords": [
+      "random",
+      "رشته",
+      "string",
+      "تصادفی",
+      "charset",
+      "نویسه",
+      "secret",
+      "crypto"
+    ]
+  },
+  {
+    "id": "token-generator",
+    "title": "مولد توکن",
+    "titleEn": "Token Generator",
+    "description": "تولید توکن‌های امن تصادفی با خروجی Hex یا Base64URL و انتخاب تعداد بایت و تعداد توکن.",
+    "category": "generators",
+    "keywords": [
+      "token",
+      "توکن",
+      "hex",
+      "base64url",
+      "secret",
+      "راز",
+      "api key",
+      "crypto"
+    ]
+  },
+  {
+    "id": "fake-data",
+    "title": "داده ساختگی",
+    "titleEn": "Fake Data Generator",
+    "description": "تولید اشخاص ساختگی با نام فارسی یا انگلیسی، ایمیل، تلفن، شهر و شرکت؛ خروجی فهرستی یا JSON.",
+    "category": "generators",
+    "keywords": [
+      "fake",
+      "ساختگی",
+      "mock",
+      "نمونه",
+      "person",
+      "شخص",
+      "data",
+      "داده"
+    ]
+  },
+  {
+    "id": "identicon",
+    "title": "مولد آیدنتیکون",
+    "titleEn": "Identicon Generator",
+    "description": "ساخت آواتار آیدنتیکون قطعی و متقارن ۵×۵ از هش SHA-256 متن ورودی روی بوم و دانلود PNG.",
+    "category": "generators",
+    "keywords": [
+      "identicon",
+      "آیدنتیکون",
+      "avatar",
+      "آواتار",
+      "hash",
+      "هش",
+      "sha-256",
+      "canvas"
+    ]
+  },
+  {
+    "id": "dummy-json",
+    "title": "JSON نمونه",
+    "titleEn": "Dummy JSON Generator",
+    "description": "تولید آرایه‌ای از اشیاء JSON واقع‌نما (شناسه، نام، ایمیل، وضعیت، تاریخ ساخت و…) برای آزمون و توسعه.",
+    "category": "generators",
+    "keywords": [
+      "json",
+      "dummy",
+      "نمونه",
+      "mock",
+      "fake",
+      "sample",
+      "api",
+      "داده"
+    ]
+  },
+  {
+    "id": "coordinate-converter",
+    "title": "تبدیل مختصات",
+    "titleEn": "Coordinate Converter",
+    "description": "تبدیل دوطرفهٔ مختصات بین درجهٔ اعشاری و فرمت درجه/دقیقه/ثانیه (DMS) با جهت‌های N/S/E/W.",
+    "category": "geo",
+    "keywords": [
+      "مختصات",
+      "coordinate",
+      "dms",
+      "decimal degrees",
+      "latitude",
+      "longitude",
+      "عرض جغرافیایی",
+      "طول جغرافیایی"
+    ]
+  },
+  {
+    "id": "geo-distance",
+    "title": "فاصلهٔ جغرافیایی",
+    "titleEn": "Geo Distance",
+    "description": "محاسبهٔ فاصلهٔ هاورساین بین دو نقطه (کیلومتر و مایل) به‌همراه زاویهٔ سمت اولیه و جهت قطب‌نما.",
+    "category": "geo",
+    "keywords": [
+      "فاصله",
+      "distance",
+      "haversine",
+      "bearing",
+      "سمت",
+      "قطب‌نما",
+      "lat lng",
+      "کیلومتر"
+    ]
+  },
+  {
+    "id": "geohash",
+    "title": "جئوهش",
+    "titleEn": "Geohash",
+    "description": "کدگذاری مختصات به Geohash با دقت دلخواه و رمزگشایی Geohash به مرکز و کادر محدودکننده.",
+    "category": "geo",
+    "keywords": [
+      "geohash",
+      "جئوهش",
+      "encode",
+      "decode",
+      "bounding box",
+      "مختصات",
+      "lat lng",
+      "دقت"
+    ]
+  },
+  {
+    "id": "polyline",
+    "title": "پلی‌لاین گوگل",
+    "titleEn": "Polyline Encoder/Decoder",
+    "description": "کدگذاری فهرستی از نقاط lat,lng به رشتهٔ Polyline گوگل و رمزگشایی رشتهٔ Polyline به نقاط.",
+    "category": "geo",
+    "keywords": [
+      "polyline",
+      "پلی‌لاین",
+      "google",
+      "encode",
+      "decode",
+      "مسیر",
+      "نقاط",
+      "lat lng"
+    ]
+  },
+  {
+    "id": "geojson-tools",
+    "title": "ابزار GeoJSON",
+    "titleEn": "GeoJSON Tools",
+    "description": "اعتبارسنجی GeoJSON، زیباسازی و فشرده‌سازی، نمایش تعداد ویژگی‌ها و محاسبهٔ کادر محدودکننده.",
+    "category": "geo",
+    "keywords": [
+      "geojson",
+      "ژئوجیسون",
+      "validate",
+      "bounding box",
+      "feature",
+      "minify",
+      "pretty",
+      "نقشه"
+    ]
+  },
+  {
+    "id": "ansi-stripper",
+    "title": "حذف کدهای ANSI",
+    "titleEn": "ANSI Code Stripper",
+    "description": "حذف دنباله‌های گریز ANSI از متن لاگ یا نمایش رنگ‌های ANSI (SGR) به‌صورت پیش‌نمایش HTML.",
+    "category": "logs",
+    "keywords": [
+      "ansi",
+      "escape",
+      "گریز",
+      "color",
+      "رنگ",
+      "terminal",
+      "ترمینال",
+      "sgr"
+    ]
+  },
+  {
+    "id": "log-parser",
+    "title": "تجزیه‌گر لاگ",
+    "titleEn": "Log Parser",
+    "description": "تجزیه خطوط لاگ Apache و Nginx (قالب Common و Combined) به جدولی شامل IP، زمان، متد، مسیر، وضعیت و…",
+    "category": "logs",
+    "keywords": [
+      "log",
+      "لاگ",
+      "apache",
+      "nginx",
+      "access",
+      "parse",
+      "تجزیه",
+      "combined"
+    ]
+  },
+  {
+    "id": "json-log-viewer",
+    "title": "نمایش‌گر لاگ JSON",
+    "titleEn": "JSON Log Viewer",
+    "description": "نمایش لاگ‌های NDJSON یا آرایه JSON در جدولی مرتب با رنگ‌بندی سطح (error/warn/info) و فیلتر متنی.",
+    "category": "logs",
+    "keywords": [
+      "json",
+      "log",
+      "لاگ",
+      "ndjson",
+      "viewer",
+      "نمایش",
+      "level",
+      "سطح"
+    ]
+  },
+  {
+    "id": "traceparent-parser",
+    "title": "تجزیه‌گر traceparent",
+    "titleEn": "W3C Traceparent Parser",
+    "description": "تجزیه هدر traceparent استاندارد W3C به اجزای نسخه، شناسه ردیابی، شناسه والد و پرچم‌ها با توضیح نمونه‌گیری.",
+    "category": "logs",
+    "keywords": [
+      "traceparent",
+      "trace",
+      "ردیابی",
+      "w3c",
+      "otel",
+      "opentelemetry",
+      "tracing",
+      "header"
+    ]
+  },
+  {
+    "id": "exit-code-reference",
+    "title": "مرجع کدهای خروج",
+    "titleEn": "Exit Code Reference",
+    "description": "مرجع جست‌وجوپذیر کدهای خروج رایج یونیکس و سیگنال‌ها (۰، ۱، ۲، ۱۲۶، ۱۲۷، ۱۳۰، ۱۳۷، ۱۴۳ و…) با توضیح فارسی.",
+    "category": "logs",
+    "keywords": [
+      "exit code",
+      "کد خروج",
+      "signal",
+      "سیگنال",
+      "unix",
+      "bash",
+      "sigkill",
+      "sigterm"
+    ]
+  },
+  {
+    "id": "image-resizer",
+    "title": "تغییر اندازه تصویر",
+    "titleEn": "Image Resizer",
+    "description": "تغییر ابعاد تصویر با تعیین عرض و ارتفاع و قفل نسبت ابعاد و دانلود خروجی PNG یا JPEG",
+    "category": "media",
+    "keywords": [
+      "resize",
+      "تغییر اندازه",
+      "image",
+      "تصویر",
+      "scale",
+      "ابعاد",
+      "width",
+      "height"
+    ]
+  },
+  {
+    "id": "image-compressor",
+    "title": "فشرده‌ساز تصویر",
+    "titleEn": "Image Compressor",
+    "description": "کاهش حجم تصویر با تنظیم کیفیت و قالب JPEG یا WebP و مقایسه‌ی حجم اصلی با خروجی",
+    "category": "media",
+    "keywords": [
+      "compress",
+      "فشرده‌سازی",
+      "image",
+      "تصویر",
+      "quality",
+      "کیفیت",
+      "jpeg",
+      "webp"
+    ]
+  },
+  {
+    "id": "image-convert",
+    "title": "تبدیل فرمت تصویر",
+    "titleEn": "Image Converter",
+    "description": "تبدیل قالب تصویر بین PNG، JPEG و WebP به کمک Canvas و دانلود خروجی",
+    "category": "media",
+    "keywords": [
+      "convert",
+      "تبدیل",
+      "image",
+      "تصویر",
+      "format",
+      "قالب",
+      "png",
+      "webp"
+    ]
+  },
+  {
+    "id": "image-crop",
+    "title": "برش تصویر",
+    "titleEn": "Image Crop",
+    "description": "برش بخشی از تصویر با تعیین مختصات x و y و عرض و ارتفاع و دانلود ناحیه‌ی برش‌خورده",
+    "category": "media",
+    "keywords": [
+      "crop",
+      "برش",
+      "image",
+      "تصویر",
+      "cut",
+      "ناحیه",
+      "trim",
+      "بریدن"
+    ]
+  },
+  {
+    "id": "image-rotate-flip",
+    "title": "چرخش و آینه تصویر",
+    "titleEn": "Rotate & Flip",
+    "description": "چرخش تصویر ۹۰، ۱۸۰ و ۲۷۰ درجه و آینه‌کردن افقی و عمودی و دانلود خروجی",
+    "category": "media",
+    "keywords": [
+      "rotate",
+      "چرخش",
+      "flip",
+      "آینه",
+      "image",
+      "تصویر",
+      "mirror",
+      "transform"
+    ]
+  },
+  {
+    "id": "image-to-scan",
+    "title": "تبدیل تصویر به اسکن",
+    "titleEn": "Image to Scan",
+    "description": "تبدیل عکس به تصویری شبیه اسکن با افزودن کمی نویز، چرخش چنددرجه‌ای و کنتراست و دانلود خروجی JPEG",
+    "category": "media",
+    "keywords": [
+      "scan",
+      "اسکن",
+      "image",
+      "تصویر",
+      "noise",
+      "نویز",
+      "rotate",
+      "چرخش",
+      "document",
+      "سند"
+    ]
+  },
+  {
+    "id": "image-filters",
+    "title": "فیلتر تصویر",
+    "titleEn": "Image Filters",
+    "description": "اعمال فیلترهای خاکستری، معکوس، روشنایی، کنتراست و سپیا روی تصویر و دانلود خروجی",
+    "category": "media",
+    "keywords": [
+      "filter",
+      "فیلتر",
+      "image",
+      "تصویر",
+      "grayscale",
+      "sepia",
+      "brightness",
+      "افکت"
+    ]
+  },
+  {
+    "id": "image-to-base64",
+    "title": "تصویر به Base64",
+    "titleEn": "Image to Base64",
+    "description": "تبدیل تصویر به Data URI و رشته‌ی خام Base64 با نمایش حجم بایت و امکان کپی",
+    "category": "media",
+    "keywords": [
+      "base64",
+      "بیس۶۴",
+      "image",
+      "تصویر",
+      "data uri",
+      "encode",
+      "کدگذاری",
+      "data url"
+    ]
+  },
+  {
+    "id": "svg-to-png",
+    "title": "SVG به PNG",
+    "titleEn": "SVG to PNG",
+    "description": "تبدیل کد SVG به تصویر PNG با انتخاب مقیاس بزرگ‌نمایی و پیش‌نمایش و دانلود خروجی",
+    "category": "media",
+    "keywords": [
+      "svg",
+      "png",
+      "convert",
+      "تبدیل",
+      "تصویر",
+      "scale",
+      "vector",
+      "برداری"
+    ]
+  },
+  {
+    "id": "public-ip",
+    "title": "آی‌پی عمومی من",
+    "titleEn": "My Public IP",
+    "description": "نمایش آدرس‌های عمومی IPv4 و IPv6 شما و آی‌پی‌ای که سرور این سایت می‌بیند.",
+    "category": "network",
+    "keywords": [
+      "آی‌پی",
+      "ip",
+      "public ip",
+      "ipv4",
+      "ipv6",
+      "آدرس عمومی",
+      "ipify",
+      "x-forwarded-for",
+      "سرور"
+    ],
+    "server": true
+  },
+  {
+    "id": "ip-info",
+    "title": "اطلاعات IP",
+    "titleEn": "IP Info",
+    "description": "نمایش کشور، استان، شهر، مختصات، شمارهٔ AS و سازمان/ISP یک آدرس IP (یا آی‌پی خودتان) با پایگاه‌دادهٔ محلی DB-IP.",
+    "category": "network",
+    "keywords": [
+      "ip",
+      "geolocation",
+      "مکان‌یابی",
+      "آی‌پی",
+      "asn",
+      "isp",
+      "کشور",
+      "شهر",
+      "موقعیت",
+      "ip lookup",
+      "db-ip"
+    ],
+    "server": true
+  },
+  {
+    "id": "ip-validator",
+    "title": "اعتبارسنج IP",
+    "titleEn": "IP Validator",
+    "description": "بررسی معتبر بودن یک آدرس و تشخیص نسخهٔ IPv4 یا IPv6.",
+    "category": "network",
+    "keywords": [
+      "اعتبارسنجی",
+      "ip",
+      "validate",
+      "ipv4",
+      "ipv6",
+      "بررسی آدرس"
+    ]
+  },
+  {
+    "id": "ipv4-subnet",
+    "title": "محاسبه‌گر زیرشبکه IPv4",
+    "titleEn": "IPv4 Subnet Calculator",
+    "description": "محاسبهٔ آدرس شبکه، broadcast، بازهٔ میزبان، ماسک و wildcard از روی CIDR.",
+    "category": "network",
+    "keywords": [
+      "زیرشبکه",
+      "subnet",
+      "cidr",
+      "netmask",
+      "broadcast",
+      "ipv4",
+      "ماسک شبکه"
+    ]
+  },
+  {
+    "id": "ipv6-cidr",
+    "title": "محاسبه‌گر IPv6",
+    "titleEn": "IPv6 CIDR",
+    "description": "نمایش فرم کامل و فشردهٔ IPv6، پیشوند و تعداد آدرس‌ها با BigInt.",
+    "category": "network",
+    "keywords": [
+      "ipv6",
+      "cidr",
+      "prefix",
+      "فشرده‌سازی",
+      "expand",
+      "compress",
+      "زیرشبکه"
+    ]
+  },
+  {
+    "id": "ip-to-int",
+    "title": "تبدیل IPv4 و عدد",
+    "titleEn": "IPv4 ↔ Integer",
+    "description": "تبدیل دوطرفهٔ آدرس IPv4 به عدد ۳۲ بیتی و مقدار هگزادسیمال.",
+    "category": "network",
+    "keywords": [
+      "ip",
+      "integer",
+      "عدد",
+      "hex",
+      "تبدیل",
+      "ipv4",
+      "long"
+    ]
+  },
+  {
+    "id": "private-ip-checker",
+    "title": "بررسی IP خصوصی/عمومی",
+    "titleEn": "Private IP Checker",
+    "description": "دسته‌بندی آدرس IPv4/IPv6 به عمومی، خصوصی، loopback، link-local و رزروشده.",
+    "category": "network",
+    "keywords": [
+      "خصوصی",
+      "private",
+      "public",
+      "rfc1918",
+      "loopback",
+      "ip",
+      "reserved",
+      "multicast"
+    ]
+  },
+  {
+    "id": "mac-formatter",
+    "title": "قالب‌بند MAC",
+    "titleEn": "MAC Address Formatter",
+    "description": "نرمال‌سازی و اعتبارسنجی آدرس MAC با انتخاب جداکننده و حروف بزرگ/کوچک.",
+    "category": "network",
+    "keywords": [
+      "mac",
+      "آدرس مک",
+      "formatter",
+      "جداکننده",
+      "hex",
+      "ethernet"
+    ]
+  },
+  {
+    "id": "dns-lookup",
+    "title": "جست‌وجوی DNS",
+    "titleEn": "DNS Lookup",
+    "description": "پرس‌وجوی رکوردهای DNS (A، AAAA، MX، TXT و …) با DNS-over-HTTPS کلودفلر.",
+    "category": "network",
+    "keywords": [
+      "dns",
+      "lookup",
+      "doh",
+      "record",
+      "mx",
+      "txt",
+      "ns",
+      "رکورد"
+    ]
+  },
+  {
+    "id": "reverse-dns",
+    "title": "DNS معکوس",
+    "titleEn": "Reverse DNS",
+    "description": "یافتن نام میزبان یک آدرس IPv4 با پرس‌وجوی PTR روی in-addr.arpa.",
+    "category": "network",
+    "keywords": [
+      "reverse dns",
+      "ptr",
+      "in-addr.arpa",
+      "hostname",
+      "dns",
+      "معکوس"
+    ]
+  },
+  {
+    "id": "whois-rdap",
+    "title": "هوئیز (RDAP)",
+    "titleEn": "WHOIS (RDAP)",
+    "description": "دریافت اطلاعات دامنه شامل ثبت‌کننده، تاریخ‌ها، وضعیت‌ها و nameserverها از RDAP.",
+    "category": "network",
+    "keywords": [
+      "whois",
+      "rdap",
+      "domain",
+      "registrar",
+      "دامنه",
+      "هوئیز",
+      "nameserver"
+    ]
+  },
+  {
+    "id": "cors-tester",
+    "title": "آزمونگر CORS",
+    "titleEn": "CORS Tester",
+    "description": "بررسی اینکه آیا یک آدرس از سمت مرورگر به‌دلیل CORS مسدود می‌شود یا خیر.",
+    "category": "network",
+    "keywords": [
+      "cors",
+      "fetch",
+      "cross origin",
+      "api",
+      "آزمون",
+      "مرورگر"
+    ]
+  },
+  {
+    "id": "websocket-tester",
+    "title": "آزمونگر WebSocket",
+    "titleEn": "WebSocket Tester",
+    "description": "اتصال به سرور WebSocket، ارسال و دریافت پیام و مشاهدهٔ وضعیت اتصال.",
+    "category": "network",
+    "keywords": [
+      "websocket",
+      "ws",
+      "wss",
+      "socket",
+      "آزمون",
+      "realtime",
+      "پیام"
+    ]
+  },
+  {
+    "id": "cheatsheets",
+    "title": "برگه‌های تقلب",
+    "titleEn": "Cheatsheets",
+    "description": "برگه‌های تقلب دستورها برای Git، Docker، Kubernetes، Linux، Bash، Cron، Markdown و SQL با جست‌وجو.",
+    "category": "reference",
+    "keywords": [
+      "cheatsheet",
+      "برگه تقلب",
+      "git",
+      "docker",
+      "kubernetes",
+      "linux",
+      "bash",
+      "cron",
+      "sql",
+      "دستور"
+    ]
+  },
+  {
+    "id": "ascii-table",
+    "title": "جدول ASCII",
+    "titleEn": "ASCII Table",
+    "description": "جدول کامل ASCII از ۰ تا ۱۲۷ شامل مقدار ده‌دهی، هگز، اکتال، کاراکتر و توضیح، با قابلیت جست‌وجو.",
+    "category": "reference",
+    "keywords": [
+      "ascii",
+      "اسکی",
+      "table",
+      "جدول",
+      "hex",
+      "octal",
+      "character",
+      "code",
+      "کاراکتر"
+    ]
+  },
+  {
+    "id": "emoji-picker",
+    "title": "انتخابگر ایموجی",
+    "titleEn": "Emoji Picker",
+    "description": "مجموعه‌ای از ایموجی‌های پرکاربرد دسته‌بندی‌شده با نام؛ جست‌وجو و کپی با یک کلیک.",
+    "category": "reference",
+    "keywords": [
+      "emoji",
+      "ایموجی",
+      "picker",
+      "انتخاب",
+      "copy",
+      "smiley",
+      "نماد",
+      "شکلک"
+    ]
+  },
+  {
+    "id": "html-entities-reference",
+    "title": "مرجع موجودیت‌های HTML",
+    "titleEn": "HTML Entities Reference",
+    "description": "فهرست موجودیت‌های رایج HTML شامل نام، کاراکتر و کد ده‌دهی/هگز با جست‌وجو و کپی.",
+    "category": "reference",
+    "keywords": [
+      "html entities",
+      "موجودیت",
+      "entity",
+      "nbsp",
+      "amp",
+      "reference",
+      "مرجع",
+      "کاراکتر"
+    ]
+  },
+  {
+    "id": "ports-reference",
+    "title": "مرجع پورت‌ها",
+    "titleEn": "Common Ports",
+    "description": "فهرست پورت‌های رایج TCP/UDP شامل شماره پورت، پروتکل، سرویس و توضیح فارسی با جست‌وجو.",
+    "category": "reference",
+    "keywords": [
+      "ports",
+      "پورت",
+      "tcp",
+      "udp",
+      "service",
+      "network",
+      "reference",
+      "مرجع"
+    ]
+  },
+  {
+    "id": "mime-reference",
+    "title": "مرجع MIME",
+    "titleEn": "MIME Types Reference",
+    "description": "فهرست انواع رایج MIME شامل نوع، پسوند معمول و توضیح فارسی با قابلیت جست‌وجو.",
+    "category": "reference",
+    "keywords": [
+      "mime",
+      "content type",
+      "نوع محتوا",
+      "extension",
+      "پسوند",
+      "reference",
+      "مرجع"
+    ]
+  },
+  {
+    "id": "html-symbols",
+    "title": "نمادهای ویژه",
+    "titleEn": "Special Symbols",
+    "description": "نمادهای ویژه در دسته‌های فلش، ریاضی، ارز، نشانه‌گذاری و ستاره؛ کلیک برای کپی کاراکتر و موجودیت HTML.",
+    "category": "reference",
+    "keywords": [
+      "symbols",
+      "نماد",
+      "arrows",
+      "math",
+      "currency",
+      "ارز",
+      "punctuation",
+      "star",
+      "ستاره"
+    ]
+  },
+  {
+    "id": "regex-cheatsheet",
+    "title": "برگه تقلب Regex",
+    "titleEn": "Regex Cheatsheet",
+    "description": "مرجع قابل‌جست‌وجوی عبارات باقاعده با توضیح فارسی هر نشانه",
+    "category": "regex",
+    "keywords": [
+      "regex",
+      "cheatsheet",
+      "برگه تقلب",
+      "مرجع",
+      "anchor",
+      "quantifier",
+      "lookaround",
+      "flags"
+    ]
+  },
+  {
+    "id": "common-regex",
+    "title": "الگوهای آماده Regex",
+    "titleEn": "Common Regex Patterns",
+    "description": "کتابخانه الگوهای رایج مانند ایمیل، URL، IP و تاریخ به‌همراه آزمونگر",
+    "category": "regex",
+    "keywords": [
+      "regex",
+      "patterns",
+      "الگو",
+      "email",
+      "url",
+      "ipv4",
+      "uuid",
+      "phone",
+      "آماده"
+    ]
+  },
+  {
+    "id": "regex-replace",
+    "title": "جایگزینی با Regex",
+    "titleEn": "Regex Replace",
+    "description": "جایگزینی متن با عبارت باقاعده، فلگ‌ها و پشتیبانی از $1",
+    "category": "regex",
+    "keywords": [
+      "regex",
+      "replace",
+      "جایگزینی",
+      "substitute",
+      "flags",
+      "capture",
+      "گروه",
+      "match"
+    ]
+  },
+  {
+    "id": "meta-tag-generator",
+    "title": "مولد متا تگ",
+    "titleEn": "Meta Tag Generator",
+    "description": "ساخت تگ‌های <meta> برای عنوان، توضیحات، Open Graph و Twitter Card از روی فیلدهای ورودی.",
+    "category": "seo",
+    "keywords": [
+      "متا تگ",
+      "meta tag",
+      "seo",
+      "open graph",
+      "twitter card",
+      "head",
+      "توضیحات"
+    ]
+  },
+  {
+    "id": "og-preview",
+    "title": "پیش‌نمایش Open Graph",
+    "titleEn": "Open Graph Preview",
+    "description": "نمایش کارت اشتراک‌گذاری شبکه‌های اجتماعی از روی عنوان، توضیحات، تصویر و دامنه.",
+    "category": "seo",
+    "keywords": [
+      "open graph",
+      "og",
+      "پیش نمایش",
+      "preview",
+      "کارت",
+      "social card",
+      "اشتراک گذاری"
+    ]
+  },
+  {
+    "id": "serp-preview",
+    "title": "پیش‌نمایش نتیجه گوگل",
+    "titleEn": "SERP Preview",
+    "description": "نمایش نتیجه گوگل از روی عنوان، توضیحات و آدرس؛ هشدار طول عنوان (۶۰) و توضیحات (۱۶۰).",
+    "category": "seo",
+    "keywords": [
+      "serp",
+      "گوگل",
+      "google",
+      "پیش نمایش",
+      "preview",
+      "title",
+      "description",
+      "snippet"
+    ]
+  },
+  {
+    "id": "keyword-density",
+    "title": "چگالی کلمات کلیدی",
+    "titleEn": "Keyword Density",
+    "description": "تحلیل متن و نمایش پرتکرارترین کلمات همراه با تعداد و درصد چگالی، با حذف کلمات کوتاه.",
+    "category": "seo",
+    "keywords": [
+      "چگالی کلمات",
+      "keyword density",
+      "seo",
+      "تحلیل متن",
+      "frequency",
+      "کلمه کلیدی",
+      "keyword"
+    ]
+  },
+  {
+    "id": "json-ld-generator",
+    "title": "مولد JSON-LD",
+    "titleEn": "JSON-LD Generator",
+    "description": "ساخت داده ساختاریافته JSON-LD برای Article، Product، Organization، FAQPage و BreadcrumbList.",
+    "category": "seo",
+    "keywords": [
+      "json-ld",
+      "structured data",
+      "داده ساختاریافته",
+      "schema.org",
+      "rich results",
+      "seo",
+      "نشانه گذاری"
+    ]
+  },
+  {
+    "id": "robots-generator",
+    "title": "مولد robots.txt",
+    "titleEn": "robots.txt Generator",
+    "description": "ساخت فایل robots.txt از روی ردیف‌های User-agent با مسیرهای Allow/Disallow و آدرس Sitemap.",
+    "category": "seo",
+    "keywords": [
+      "robots.txt",
+      "robots",
+      "crawler",
+      "خزنده",
+      "disallow",
+      "user-agent",
+      "sitemap",
+      "seo"
+    ]
+  },
+  {
+    "id": "sitemap-generator",
+    "title": "مولد Sitemap",
+    "titleEn": "Sitemap Generator",
+    "description": "ساخت sitemap.xml از فهرست آدرس‌ها (هر خط یک آدرس) با changefreq و priority اختیاری.",
+    "category": "seo",
+    "keywords": [
+      "sitemap",
+      "نقشه سایت",
+      "xml",
+      "seo",
+      "changefreq",
+      "priority",
+      "url"
+    ]
+  },
+  {
+    "id": "csv-to-markdown",
+    "title": "CSV به جدول Markdown",
+    "titleEn": "CSV → Markdown Table",
+    "description": "تجزیه CSV با انتخاب جداکننده و پشتیبانی از نقل‌قول و تبدیل آن به جدول Markdown",
+    "category": "table",
+    "keywords": [
+      "csv",
+      "markdown",
+      "مارک‌داون",
+      "table",
+      "جدول",
+      "convert",
+      "تبدیل",
+      "md"
+    ]
+  },
+  {
+    "id": "markdown-table-csv",
+    "title": "جدول Markdown به CSV",
+    "titleEn": "Markdown Table → CSV",
+    "description": "تجزیه یک جدول Markdown و تبدیل آن به CSV با نقل‌قول‌گذاری مناسب مقادیر",
+    "category": "table",
+    "keywords": [
+      "markdown",
+      "مارک‌داون",
+      "csv",
+      "table",
+      "جدول",
+      "convert",
+      "تبدیل",
+      "md"
+    ]
+  },
+  {
+    "id": "csv-to-html",
+    "title": "CSV به جدول HTML",
+    "titleEn": "CSV → HTML Table",
+    "description": "تبدیل CSV به جدول HTML استاندارد با thead و tbody و امکان کپی کد خروجی",
+    "category": "table",
+    "keywords": [
+      "csv",
+      "html",
+      "table",
+      "جدول",
+      "thead",
+      "tbody",
+      "convert",
+      "تبدیل"
+    ]
+  },
+  {
+    "id": "csv-tools",
+    "title": "ابزار CSV",
+    "titleEn": "CSV Tools",
+    "description": "عملیات روی CSV: مرتب‌سازی بر اساس ستون، حذف ردیف‌های تکراری، ترانهاده و فیلتر ردیف‌ها",
+    "category": "table",
+    "keywords": [
+      "csv",
+      "sort",
+      "مرتب‌سازی",
+      "duplicate",
+      "تکراری",
+      "transpose",
+      "ترانهاده",
+      "filter"
+    ]
+  },
+  {
+    "id": "sql-insert-generator",
+    "title": "مولد INSERT از CSV",
+    "titleEn": "SQL INSERT Generator",
+    "description": "ساخت دستورهای INSERT INTO از CSV دارای سرستون با نقل‌قول‌گذاری رشته‌ها و NULL برای مقادیر خالی",
+    "category": "table",
+    "keywords": [
+      "sql",
+      "insert",
+      "csv",
+      "database",
+      "دیتابیس",
+      "query",
+      "پرس‌وجو",
+      "generator"
+    ]
+  },
+  {
+    "id": "markdown-table-generator",
+    "title": "مولد جدول Markdown",
+    "titleEn": "Markdown Table Generator",
+    "description": "ساخت جدول Markdown با تعیین تعداد سطر و ستون، ویرایش سلول‌ها و انتخاب ترازبندی هر ستون",
+    "category": "table",
+    "keywords": [
+      "markdown",
+      "مارک‌داون",
+      "table",
+      "جدول",
+      "generator",
+      "مولد",
+      "grid",
+      "align"
+    ]
+  },
+  {
+    "id": "text-frequency",
+    "title": "فراوانی متن",
+    "titleEn": "Text Frequency",
+    "description": "شمارش فراوانی کاراکترها، کلمات و n-gram ها در متن",
+    "category": "text",
+    "keywords": [
+      "frequency",
+      "فراوانی",
+      "ngram",
+      "word count",
+      "کلمه",
+      "کاراکتر",
+      "histogram",
+      "تکرار"
+    ]
+  },
+  {
+    "id": "whitespace-tool",
+    "title": "ابزار فاصله‌ها",
+    "titleEn": "Whitespace Tool",
+    "description": "تبدیل تب و فاصله، یکسان‌سازی پایان خط و حذف فاصله‌های اضافی",
+    "category": "text",
+    "keywords": [
+      "whitespace",
+      "فاصله",
+      "tab",
+      "تب",
+      "trim",
+      "line ending",
+      "lf",
+      "crlf"
+    ]
+  },
+  {
+    "id": "text-wrap",
+    "title": "شکستن خط متن",
+    "titleEn": "Text Wrap / Unwrap",
+    "description": "شکستن متن در عرض دلخواه یا چسباندن خطوط شکسته به پاراگراف",
+    "category": "text",
+    "keywords": [
+      "wrap",
+      "unwrap",
+      "شکستن",
+      "خط",
+      "column",
+      "ستون",
+      "reflow",
+      "پاراگراف"
+    ]
+  },
+  {
+    "id": "text-similarity",
+    "title": "شباهت متن",
+    "titleEn": "Text Similarity",
+    "description": "محاسبه فاصله لِوِنشتاین، درصد شباهت، Jaccard و ضریب Dice",
+    "category": "text",
+    "keywords": [
+      "similarity",
+      "شباهت",
+      "levenshtein",
+      "jaccard",
+      "dice",
+      "distance",
+      "فاصله",
+      "مقایسه"
+    ]
+  },
+  {
+    "id": "string-checker",
+    "title": "بررسی رشته",
+    "titleEn": "String Checker",
+    "description": "بررسی متقارن بودن (palindrome) و آناگرام بودن دو رشته",
+    "category": "text",
+    "keywords": [
+      "palindrome",
+      "متقارن",
+      "anagram",
+      "آناگرام",
+      "string",
+      "رشته",
+      "check",
+      "بررسی"
+    ]
+  },
+  {
+    "id": "diacritics-remover",
+    "title": "حذف اعراب و دیاکریتیک",
+    "titleEn": "Diacritics Remover",
+    "description": "حذف نشانه‌های ترکیبی لاتین و در صورت نیاز حذف اعراب عربی/فارسی",
+    "category": "text",
+    "keywords": [
+      "diacritics",
+      "اعراب",
+      "harakat",
+      "حرکت",
+      "accent",
+      "نشانه",
+      "nfd",
+      "تشکیل"
+    ]
+  },
+  {
+    "id": "invisible-chars",
+    "title": "کاراکترهای نامرئی",
+    "titleEn": "Invisible Characters",
+    "description": "تشخیص و حذف کاراکترهای نامرئی و با عرض صفر مانند ZWNJ و BOM",
+    "category": "text",
+    "keywords": [
+      "invisible",
+      "نامرئی",
+      "zero width",
+      "zwnj",
+      "zwsp",
+      "bom",
+      "نیم‌فاصله",
+      "عرض صفر"
+    ]
+  },
+  {
+    "id": "smart-quotes",
+    "title": "نقل‌قول هوشمند",
+    "titleEn": "Smart Quotes",
+    "description": "تبدیل گیومه‌های ساده به هوشمند و خط تیره دوتایی به em/en dash",
+    "category": "text",
+    "keywords": [
+      "smart quotes",
+      "نقل قول",
+      "گیومه",
+      "curly",
+      "em dash",
+      "en dash",
+      "خط تیره",
+      "typography"
+    ]
+  },
+  {
+    "id": "reverse-text",
+    "title": "معکوس متن",
+    "titleEn": "Reverse Text",
+    "description": "معکوس کردن متن بر اساس کاراکتر، کلمه یا خط",
+    "category": "text",
+    "keywords": [
+      "reverse",
+      "معکوس",
+      "flip",
+      "برعکس",
+      "character",
+      "word",
+      "کلمه",
+      "خط"
+    ]
+  },
+  {
+    "id": "roman-numeral",
+    "title": "عدد رومی",
+    "titleEn": "Roman Numerals",
+    "description": "تبدیل دوطرفه‌ی عدد صحیح (۱ تا ۳۹۹۹) به عدد رومی و بالعکس",
+    "category": "units",
+    "keywords": [
+      "roman",
+      "عدد رومی",
+      "numeral",
+      "convert",
+      "latin",
+      "تبدیل",
+      "mmxxiv"
+    ]
+  },
+  {
+    "id": "scientific-notation",
+    "title": "نماد علمی",
+    "titleEn": "Scientific Notation",
+    "description": "تبدیل عدد به نماد علمی و مهندسی و بازگرداندن به عدد معمولی",
+    "category": "units",
+    "keywords": [
+      "scientific",
+      "نماد علمی",
+      "engineering",
+      "مهندسی",
+      "exponent",
+      "توان",
+      "notation"
+    ]
+  },
+  {
+    "id": "fraction-decimal",
+    "title": "کسر و اعشار",
+    "titleEn": "Fraction ↔ Decimal",
+    "description": "تبدیل کسر به اعشار و بالعکس، ساده‌سازی کسر و تشخیص اعشار تکرارشونده",
+    "category": "units",
+    "keywords": [
+      "fraction",
+      "کسر",
+      "decimal",
+      "اعشار",
+      "simplify",
+      "repeating",
+      "تکرارشونده"
+    ]
+  },
+  {
+    "id": "percentage-calculator",
+    "title": "ماشین‌حساب درصد",
+    "titleEn": "Percentage Calculator",
+    "description": "محاسبه‌ی درصدی از یک عدد، نسبت درصدی، تغییر درصدی و افزایش یا کاهش درصدی",
+    "category": "units",
+    "keywords": [
+      "percentage",
+      "درصد",
+      "percent",
+      "change",
+      "تغییر",
+      "increase",
+      "محاسبه"
+    ]
+  },
+  {
+    "id": "ratio-calculator",
+    "title": "ماشین‌حساب نسبت",
+    "titleEn": "Ratio Calculator",
+    "description": "ساده‌سازی نسبت a:b و حل تناسب a:b = c:؟",
+    "category": "units",
+    "keywords": [
+      "ratio",
+      "نسبت",
+      "proportion",
+      "تناسب",
+      "simplify",
+      "scale",
+      "مقیاس"
+    ]
+  },
+  {
+    "id": "persian-number",
+    "title": "تبدیل اعداد فارسی و انگلیسی",
+    "titleEn": "Persian ↔ English Numbers",
+    "description": "تبدیل ارقام فارسی، عربی و انگلیسی در متن و تبدیل عدد به حروف فارسی",
+    "category": "units",
+    "keywords": [
+      "persian number",
+      "اعداد فارسی",
+      "digits",
+      "ارقام",
+      "english",
+      "عدد به حروف",
+      "convert",
+      "تبدیل"
+    ]
+  },
+  {
+    "id": "query-string",
+    "title": "تجزیه‌گر کوئری‌استرینگ",
+    "titleEn": "Query String",
+    "description": "یک کوئری‌استرینگ یا آدرس کامل را به ردیف‌های کلید/مقدار تجزیه کنید، ویرایش و دوباره بسازید.",
+    "category": "url",
+    "keywords": [
+      "کوئری استرینگ",
+      "query string",
+      "querystring",
+      "پارامتر",
+      "url params",
+      "تجزیه",
+      "parse"
+    ]
+  },
+  {
+    "id": "utm-builder",
+    "title": "سازنده UTM",
+    "titleEn": "UTM Builder",
+    "description": "ساخت لینک کمپین با پارامترهای UTM (source، medium، campaign و …) و استخراج UTM از یک آدرس.",
+    "category": "url",
+    "keywords": [
+      "utm",
+      "کمپین",
+      "campaign",
+      "بازاریابی",
+      "marketing",
+      "utm_source",
+      "تحلیل",
+      "tracking"
+    ]
+  },
+  {
+    "id": "link-generator",
+    "title": "مولد لینک",
+    "titleEn": "Link Generator",
+    "description": "ساخت لینک‌های ویژه mailto، tel، sms و geo با فیلدهای مرتبط مانند موضوع و متن ایمیل.",
+    "category": "url",
+    "keywords": [
+      "لینک",
+      "link",
+      "mailto",
+      "tel",
+      "sms",
+      "geo",
+      "ایمیل",
+      "تماس"
+    ]
+  },
+  {
+    "id": "url-normalizer",
+    "title": "نرمال‌ساز URL",
+    "titleEn": "URL Normalizer",
+    "description": "یکدست‌سازی آدرس: حروف کوچک scheme و host، حذف پورت پیش‌فرض، مرتب‌سازی پارامترها و حل مسیرها.",
+    "category": "url",
+    "keywords": [
+      "نرمال سازی",
+      "normalize",
+      "url",
+      "canonical",
+      "یکدست",
+      "مرتب سازی",
+      "trailing slash"
+    ]
+  },
+  {
+    "id": "cookie-parser",
+    "title": "تجزیه‌گر کوکی",
+    "titleEn": "Cookie Parser",
+    "description": "تجزیه هدر Cookie یا Set-Cookie به جدول ویژگی‌ها (Domain، Path، Expires، SameSite و …) با توضیح فارسی.",
+    "category": "url",
+    "keywords": [
+      "کوکی",
+      "cookie",
+      "set-cookie",
+      "samesite",
+      "httponly",
+      "هدر",
+      "header",
+      "parse"
+    ]
+  },
+  {
+    "id": "validator-suite",
+    "title": "مجموعه اعتبارسنج",
+    "titleEn": "Validator Suite",
+    "description": "اعتبارسنجی سریع ایمیل، URL، دامنه، IPv4/IPv6، MAC، UUID، رنگ Hex، Base64، JSON، Slug و شماره تلفن با نمایش دلیل به فارسی.",
+    "category": "validators",
+    "keywords": [
+      "validator",
+      "اعتبارسنج",
+      "email",
+      "ایمیل",
+      "url",
+      "uuid",
+      "json",
+      "ip",
+      "regex"
+    ]
+  },
+  {
+    "id": "credit-card-validator",
+    "title": "اعتبارسنج کارت بانکی",
+    "titleEn": "Credit Card Validator",
+    "description": "بررسی صحت شماره کارت با الگوریتم Luhn و تشخیص برند (ویزا، مسترکارت، امریکن‌اکسپرس و…) به‌همراه شناسایی قالب کارت ۱۶ رقمی ایرانی.",
+    "category": "validators",
+    "keywords": [
+      "credit card",
+      "کارت بانکی",
+      "luhn",
+      "visa",
+      "mastercard",
+      "کارت",
+      "iin",
+      "ایران"
+    ]
+  },
+  {
+    "id": "iban-validator",
+    "title": "اعتبارسنج IBAN",
+    "titleEn": "IBAN Validator",
+    "description": "اعتبارسنجی شماره شبا/IBAN با بررسی طول هر کشور و چک‌سام mod-97، به‌همراه نمایش کشور و قالب‌بندی استاندارد.",
+    "category": "validators",
+    "keywords": [
+      "iban",
+      "شبا",
+      "sheba",
+      "bank",
+      "بانک",
+      "mod-97",
+      "checksum",
+      "ایران"
+    ]
+  },
+  {
+    "id": "isbn-validator",
+    "title": "اعتبارسنج ISBN",
+    "titleEn": "ISBN Validator",
+    "description": "بررسی صحت شابک ISBN-10 (mod 11) و ISBN-13 (mod 10) و تبدیل دوسویه میان این دو قالب.",
+    "category": "validators",
+    "keywords": [
+      "isbn",
+      "شابک",
+      "book",
+      "کتاب",
+      "isbn-10",
+      "isbn-13",
+      "checksum",
+      "convert"
+    ]
+  },
+  {
+    "id": "luhn-checker",
+    "title": "بررسی Luhn",
+    "titleEn": "Luhn Checker",
+    "description": "اعتبارسنجی هر رشتهٔ عددی با الگوریتم Luhn و محاسبهٔ رقم کنترلی برای یک شمارهٔ ناقص.",
+    "category": "validators",
+    "keywords": [
+      "luhn",
+      "checksum",
+      "check digit",
+      "رقم کنترلی",
+      "mod 10",
+      "عدد",
+      "validate"
+    ]
+  },
+  {
+    "id": "regex-validator",
+    "title": "اعتبارسنج Regex",
+    "titleEn": "Regex Validator",
+    "description": "بررسی معتبر بودن یک الگوی عبارت باقاعده با new RegExp، تشخیص پرچم‌ها از قالب /pattern/flags و نمایش پیام خطا به فارسی.",
+    "category": "validators",
+    "keywords": [
+      "regex",
+      "regexp",
+      "عبارت باقاعده",
+      "pattern",
+      "flags",
+      "validate",
+      "compile"
+    ]
+  },
+  {
+    "id": "national-code",
+    "title": "اعتبارسنج کد ملی",
+    "titleEn": "Iranian National Code Validator",
+    "description": "بررسی صحت کد ملی ۱۰ رقمی ایران با الگوریتم رقم کنترل رسمی.",
+    "category": "validators",
+    "keywords": [
+      "کد ملی",
+      "national code",
+      "iran",
+      "ایران",
+      "checksum",
+      "رقم کنترل",
+      "code melli"
+    ],
+    "featured": true
+  },
+  {
+    "id": "legal-national-id",
+    "title": "اعتبارسنج شناسهٔ ملی اشخاص حقوقی",
+    "titleEn": "Legal Entity National ID Validator",
+    "description": "بررسی صحت شناسهٔ ملی ۱۱ رقمی شرکت‌ها و اشخاص حقوقی با الگوریتم رسمی.",
+    "category": "validators",
+    "keywords": [
+      "شناسه ملی",
+      "اشخاص حقوقی",
+      "legal id",
+      "company",
+      "شرکت",
+      "checksum"
+    ]
+  },
+  {
+    "id": "sheba-validator",
+    "title": "اعتبارسنج شبا و تشخیص بانک",
+    "titleEn": "Sheba (IBAN) Validator",
+    "description": "اعتبارسنجی شمارهٔ شبا (IBAN ایران) با چک‌سام mod-97 و تشخیص نام بانک از کد سه‌رقمی.",
+    "category": "validators",
+    "keywords": [
+      "شبا",
+      "sheba",
+      "iban",
+      "بانک",
+      "mod-97",
+      "ایران",
+      "بانک ایرانی"
+    ],
+    "featured": true
+  },
+  {
+    "id": "bank-card",
+    "title": "اعتبارسنج شماره کارت و تشخیص بانک",
+    "titleEn": "Bank Card Validator",
+    "description": "بررسی صحت شماره کارت ۱۶ رقمی با Luhn و تشخیص بانک صادرکننده از پیش‌شمارهٔ BIN.",
+    "category": "validators",
+    "keywords": [
+      "شماره کارت",
+      "bank card",
+      "luhn",
+      "بانک",
+      "bin",
+      "کارت بانکی",
+      "ایران"
+    ],
+    "featured": true
+  },
+  {
+    "id": "imei-validator",
+    "title": "اعتبارسنج IMEI",
+    "titleEn": "IMEI Validator",
+    "description": "بررسی صحت کد ۱۵ رقمی IMEI گوشی با الگوریتم Luhn.",
+    "category": "validators",
+    "keywords": [
+      "imei",
+      "موبایل",
+      "گوشی",
+      "luhn",
+      "phone",
+      "آی‌ام‌ای‌آی"
+    ]
+  },
+  {
+    "id": "barcode-validator",
+    "title": "اعتبارسنج بارکد (EAN/UPC)",
+    "titleEn": "Barcode (EAN/UPC) Validator",
+    "description": "بررسی رقم کنترل بارکدهای EAN-13، EAN-8 و UPC-A.",
+    "category": "validators",
+    "keywords": [
+      "بارکد",
+      "barcode",
+      "ean",
+      "upc",
+      "ean-13",
+      "checksum",
+      "کالا"
+    ]
+  },
+  {
+    "id": "isin-validator",
+    "title": "اعتبارسنج ISIN",
+    "titleEn": "ISIN Validator",
+    "description": "بررسی صحت کد بین‌المللی اوراق بهادار ISIN با تبدیل حروف به عدد و Luhn.",
+    "category": "validators",
+    "keywords": [
+      "isin",
+      "اوراق بهادار",
+      "سهام",
+      "securities",
+      "luhn",
+      "iso 6166"
+    ]
+  }
+]

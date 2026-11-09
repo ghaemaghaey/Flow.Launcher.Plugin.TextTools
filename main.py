@@ -1,82 +1,98 @@
 # -*- coding: utf-8 -*-
+"""Text Tools for Flow Launcher.
 
-import sys, os
+Every tool reads the clipboard, transforms it and copies the result back.
+Type `tt` to list/search tools, then press Enter to run the selected tool.
+"""
+
+import os
+import re
+import sys
+import traceback
+
 parent_folder_path = os.path.abspath(os.path.dirname(__file__))
 sys.path.append(parent_folder_path)
-sys.path.append(os.path.join(parent_folder_path, 'lib'))
-sys.path.append(os.path.join(parent_folder_path, 'plugin'))
+sys.path.append(os.path.join(parent_folder_path, "lib"))
+sys.path.append(os.path.join(parent_folder_path, "plugin"))
 
 from flowlauncher import FlowLauncher
-import pyperclip
-import re
+
+from tools.common import err, finish, read_clipboard, toast
+from tools.model import Input, ToolError
+from tools.registry import TOOL_BY_ID, search
+
+
+def _extract_args(query: str, tool) -> str:
+    """Return the part of the Flow query after the tool name.
+
+    `tt uuid v7 1|1|0` -> `1|1|0`, `tt uuid v7 4` -> `4`.
+    """
+    if not query:
+        return ""
+    text = query.strip()
+    for candidate in (tool.title, tool.id, tool.title_fa):
+        if candidate and text.lower().startswith(candidate.lower()):
+            return text[len(candidate):].strip()
+    words = set()
+    for value in (tool.title, tool.id):
+        expanded = re.sub(r"([a-z])([A-Z])", r"\1 \2", value).lower()
+        words.update(re.findall(r"[a-z0-9]+", expanded))
+    tokens = text.split()
+    return " ".join(token for token in tokens if token.lower() not in words).strip()
+
 
 class TextTools(FlowLauncher):
 
     def query(self, query):
-        tools = [
-            {"name": "Arabic to Persian", "subtitle": "Replace ك→ک and ي→ی", "method": "arabic_to_persian"},
-            {"name": "Add comma to each line", "subtitle": "Append , to end of every line", "method": "add_comma"},
-            {"name": "UPPERCASE", "subtitle": "Convert text to uppercase", "method": "to_upper"},
-            {"name": "lowercase", "subtitle": "Convert text to lowercase", "method": "to_lower"},
-            {"name": "Remove empty lines", "subtitle": "Delete all blank lines", "method": "remove_empty_lines"},
-            {"name": "Trim each line", "subtitle": "Remove leading/trailing spaces from each line", "method": "trim_lines"},
-            {"name": "Remove all spaces", "subtitle": "Remove full spaces, half spaces, and zero-width chars", "method": "remove_spaces"},
-        ]
-
-        # No text passed as a parameter anymore — each action method
-        # reads the clipboard itself at execution time, so it always
-        # gets what's on the clipboard right when you click, not
-        # whatever was there when query() ran.
-        return [
-            {
-                "Title": tool["name"],
-                "SubTitle": tool["subtitle"],
-                "IcoPath": "Images/app.png",
-                "JsonRPCAction": {
-                    "method": tool["method"],
-                    "parameters": []
+        tools = search(query or "")
+        # Allow generator arguments in the query, e.g. `uuid v7 4` or
+        # `uuid v7 1|1|0`: if the full query has no match, drop trailing
+        # tokens until the tool is found.
+        if not tools and query and query.strip():
+            parts = query.split()
+            while len(parts) > 1 and not tools:
+                parts.pop()
+                tools = search(" ".join(parts))
+        results = []
+        for tool in tools:
+            # Keep the subtitle useful: when a tool has an input format, show
+            # only that usage instead of repeating the (self-explanatory) name
+            # and the long Persian description.
+            if tool.hint:
+                subtitle = f"in: {tool.hint}"
+            else:
+                subtitle = tool.description
+            results.append(
+                {
+                    "Title": tool.title,
+                    "SubTitle": subtitle,
+                    "IcoPath": "Images/app.png",
+                    "JsonRPCAction": {
+                        "method": "run_tool",
+                        "parameters": [tool.id, query or ""],
+                    },
                 }
-            }
-            for tool in tools
-            if query.lower() in tool["name"].lower() or query == ""
-        ]
+            )
+        return results
 
-    def _get_clipboard_text(self):
+    def run_tool(self, tool_id, query=""):
+        tool = TOOL_BY_ID.get(tool_id)
+        if tool is None:
+            toast("Text Tools", f"Unknown tool: {tool_id}")
+            return
         try:
-            return pyperclip.paste()
+            args = _extract_args(query, tool)
+            if args and (tool.category == "generators" or tool.id == "diceware"):
+                item = Input(text=args)
+            else:
+                item = read_clipboard()
+            output = tool.run(item)
+            finish(output)
+        except ToolError as exc:
+            finish(err(str(exc), title=tool.title))
         except Exception:
-            return ""
+            finish(err(f"{tool.title} failed:\n{traceback.format_exc(limit=3)}", title=tool.title))
 
-    def arabic_to_persian(self):
-        text = self._get_clipboard_text()
-        pyperclip.copy(text.replace("ك", "ک").replace("ي", "ی"))
-
-    def add_comma(self):
-        text = self._get_clipboard_text()
-        pyperclip.copy("\n".join(line + "," for line in text.splitlines()))
-
-    def to_upper(self):
-        text = self._get_clipboard_text()
-        pyperclip.copy(text.upper())
-
-    def to_lower(self):
-        text = self._get_clipboard_text()
-        pyperclip.copy(text.lower())
-
-    def remove_empty_lines(self):
-        text = self._get_clipboard_text()
-        pyperclip.copy("\n".join(l for l in text.splitlines() if l.strip()))
-
-    def trim_lines(self):
-        text = self._get_clipboard_text()
-        pyperclip.copy("\n".join(l.strip() for l in text.splitlines()))
-
-    def remove_spaces(self):
-        text = self._get_clipboard_text()
-        # Remove: regular space, half-space (ZWNJ U+200C), zero-width space (U+200B),
-        # non-breaking space (U+00A0), em space, en space, thin space, and all unicode spaces
-        cleaned = re.sub(r'[\s\u200c\u200b\u00a0\u2000-\u200a\u202f\u205f\u3000\ufeff]', '', text)
-        pyperclip.copy(cleaned)
 
 if __name__ == "__main__":
     TextTools()
